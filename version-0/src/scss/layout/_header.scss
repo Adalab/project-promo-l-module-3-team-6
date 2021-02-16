@@ -1,0 +1,23 @@
+.header {
+    height: auto;
+
+    &__container {
+        max-width: 1500px;
+        margin: 0 auto;
+        
+        &--logo {
+            width: 290px;
+            // padding: 31px 0 30px 40px;
+            object-fit: contain;
+            padding: 31px 0 30px 40px;
+
+            @include tablet {
+                width: 324px;
+            }
+
+            @include desktop {
+                width: 358px;
+            }
+        }
+    }
+}
