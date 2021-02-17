@@ -9,11 +9,9 @@ class Fill extends React.Component {
   render() {
     return (
       <div className="fill__form hidden__container">
-        <h6 className="fill__form--notice">
-          Todos los campos son obligatorios
-        </h6>
+        <h6 className="fill__form--notice">{this.props.required}</h6>
         <label className="fill__form--label userName" for="name">
-          Nombre completo
+          {this.props.name}
         </label>
         <input
           className="fill__form--input js-input-name js-input-text js-form"
@@ -24,7 +22,7 @@ class Fill extends React.Component {
           required
         />
         <label className="fill__form--label" for="job">
-          Puesto
+          {this.props.job}
         </label>
         <input
           className="fill__form--input js-input-job js-input-text js-form"
@@ -35,11 +33,11 @@ class Fill extends React.Component {
           required
         />
         <label className="fill__form--label" for="image">
-          Imagen de perfil
+          {this.props.image}
         </label>
         <div className="fill__form--image">
           <label className="fill__form--image--button js__profile-trigger">
-            Añadir imagen
+            {this.props.btnImage}
           </label>
           <input
             type="file"
@@ -50,7 +48,7 @@ class Fill extends React.Component {
           <div className="fill__form--image--preview js__profile-preview js-form"></div>
         </div>
         <label className="fill__form--label" for="email">
-          Email
+          {this.props.mail}
         </label>
         <input
           className="fill__form--input js-input-email js-input-text js-form"
@@ -61,7 +59,7 @@ class Fill extends React.Component {
           required
         />
         <label className="fill__form--label" for="phone">
-          Teléfono
+          {this.props.tel}
         </label>
         <input
           className="fill__form--input js-input-phone js-input-text js-form"
@@ -72,7 +70,7 @@ class Fill extends React.Component {
           required
         />
         <label className="fill__form--label" for="linkedin">
-          Linkedin
+          {this.props.linkedin}
         </label>
         <input
           className="fill__form--input js-input-linkedin js-input-text js-form"
@@ -83,7 +81,7 @@ class Fill extends React.Component {
           required
         />
         <label className="fill__form--label" for="github">
-          Github
+          {this.props.git}
         </label>
         <input
           className="fill__form--input js-input-github js-input-text js-form"

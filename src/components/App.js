@@ -104,7 +104,17 @@ class App extends React.Component {
                   </h2>
                   <img className="up-icon" src="./assets/images/monstera.png" />
                 </div>
-                <Fill />
+                <Fill
+                  required="Todos los campos son obligatorios"
+                  name="Nombre Completo"
+                  job="Puesto"
+                  image="Imagen de perfil"
+                  btnImage="Añadir imagen"
+                  mail="Email"
+                  tel="Teléfono"
+                  linkedin="Linkedin"
+                  git="Github"
+                />
               </fieldset>
 
               <fieldset className="share js-collapsable-container collapsable--close">
