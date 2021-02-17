@@ -1,7 +1,7 @@
-import React from 'react';
-import Header from './Header';
-import '../stylesheets/App.css';
-import Palette from './Palette';
+import React from "react";
+import Header from "./Header";
+import "../stylesheets/App.css";
+import Palette from "./Palette";
 
 class App extends React.Component {
   constructor(props) {
@@ -233,21 +233,7 @@ class App extends React.Component {
             </form>
           </section>
         </main>
-        <footer className="footer">
-          <div className="footer__container">
-            <small className="footer__copy">
-              Tree huggers cards &copy; 2021
-            </small>
-            <a href="https://adalab.es/" target="_blank" alt="">
-              <img
-                className="footer__logo"
-                src="./assets/images/logo-adalab.png"
-                alt="Logo Adalab"
-                title="Ir a Adalab"
-              />
-            </a>
-          </div>
-        </footer>
+        <Footer />
       </div>
     );
   }
