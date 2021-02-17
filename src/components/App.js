@@ -14,7 +14,7 @@ class App extends React.Component {
             <a href="./index.html" title="home">
               <img
                 className="header__container--logo"
-                src="./assets/images/logo-treehuggers.png"
+                src="./images/logo-treehuggers.png"
                 alt="Logo Awesome profile-cards"
               />
             </a>
