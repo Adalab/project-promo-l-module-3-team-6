@@ -1,5 +1,7 @@
 import React from 'react';
+import Header from './Header';
 import '../stylesheets/App.css';
+import Palette from './Palette';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,17 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="header">
-          <div className="header__container">
-            <a href="./index.html" title="home">
-              <img
-                className="header__container--logo"
-                src="./images/logo-treehuggers.png"
-                alt="Logo Awesome profile-cards"
-              />
-            </a>
-          </div>
-        </header>
+        <Header />
 
         <main className="app">
           <section className="app__card">
@@ -97,49 +89,9 @@ class App extends React.Component {
                 <div className="design__colors hidden__container">
                   <h5 className="design__colors--subtitle">Colores</h5>
                   <div className="design__colors--palettes">
-                    <div className="palette palette1">
-                      <label className="cursor" for="palette1">
-                        <input
-                          id="palette1"
-                          type="radio"
-                          value="1"
-                          name="palette"
-                          className="js-palette cursor"
-                          checked
-                        />
-                        <div className="palette1__color1 color-box">1</div>
-                        <div className="palette1__color2 color-box">2</div>
-                        <div className="palette1__color3 color-box">3</div>
-                      </label>
-                    </div>
-                    <div className="palette palette2">
-                      <label className="cursor" for="palette2">
-                        <input
-                          id="palette2"
-                          type="radio"
-                          value="2"
-                          name="palette"
-                          className="js-palette cursor"
-                        />
-                        <span className="palette2__color1 color-box">1</span>
-                        <span className="palette2__color2 color-box">2</span>
-                        <span className="palette2__color3 color-box">3</span>
-                      </label>
-                    </div>
-                    <div className="palette palette3">
-                      <label className="cursor" for="palette3">
-                        <input
-                          id="palette3"
-                          type="radio"
-                          value="3"
-                          name="palette"
-                          className="js-palette cursor"
-                        />
-                        <span className="palette3__color1 color-box">1</span>
-                        <span className="palette3__color2 color-box">2</span>
-                        <span className="palette3__color3 color-box">3</span>
-                      </label>
-                    </div>
+                    <Palette numberPalette="1" />
+                    <Palette numberPalette="2" />
+                    <Palette numberPalette="3" />
                   </div>
                 </div>
               </fieldset>

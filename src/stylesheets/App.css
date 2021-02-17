@@ -29,9 +29,9 @@
   }
 }
 
-.collapsable--close .hidden__container {
+/* .collapsable--close .hidden__container {
   display: none;
-}
+} */
 
 .collapsable--close .fa-chevron-up {
   transform: rotate(180deg);
