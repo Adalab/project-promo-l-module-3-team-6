@@ -6,7 +6,6 @@ class Palette extends React.Component {
     super(props);
   }
 
-  /*     class = `palette palette ${this.props.numberPalette}` */
   render() {
     return (
       <div className={`palette palette${this.props.numberPalette}`}>
