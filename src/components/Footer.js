@@ -1,6 +1,6 @@
 import React from "react";
-import "../stylesheets/App.css";
-import logo from "../images/logo-treehuggers.png";
+import "../stylesheets/Footer.css";
+import logo from "../images/logo-adalab.png";
 
 class Footer extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class Footer extends React.Component {
           <a href="https://adalab.es/" target="_blank" alt="">
             <img
               className="footer__logo"
-              src="./assets/images/logo-adalab.png"
+              src={logo}
               alt="Logo Adalab"
               title="Ir a Adalab"
             />

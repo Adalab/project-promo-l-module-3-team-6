@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import "../stylesheets/App.css";
 import Palette from "./Palette";
+import Footer from "./Footer";
 
 class App extends React.Component {
   constructor(props) {
