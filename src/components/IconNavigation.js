@@ -1,5 +1,5 @@
-import React from 'react';
-import '../stylesheets/App.css';
+import React from "react";
+//import "../stylesheets/pages/App.scss";
 
 class IconNavigation extends React.Component {
   /*   constructor(props) {

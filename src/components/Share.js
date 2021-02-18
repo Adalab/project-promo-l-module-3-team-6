@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/App.css";
+//import "../stylesheets/pages/App.scss";
 import leaf from "../images/monstera.png";
 
 class Share extends React.Component {
