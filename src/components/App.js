@@ -1,11 +1,12 @@
-import React from 'react';
-import Header from './Header';
-import '../stylesheets/App.css';
-import Palette from './Palette';
-import CardPreview from './CardPreview';
-import Navigation from './Navigation';
-import Share from './Share';
-import Footer from './Footer';
+import React from "react";
+import Header from "./Header";
+import "../stylesheets/App.css";
+import Palette from "./Palette";
+import CardPreview from "./CardPreview";
+import Navigation from "./Navigation";
+import Share from "./Share";
+import Footer from "./Footer";
+import leaf from "../images/monstera.png";
 
 class App extends React.Component {
   /*   constructor(props) {
@@ -41,7 +42,7 @@ class App extends React.Component {
                     <i className="design__header--text-icon far fa-object-ungroup"></i>
                     Diseña
                   </h2>
-                  <img className="up-icon" src="./assets/images/monstera.png" />
+                  <img className="up-icon" src={leaf} />
                 </div>
                 <div className="design__colors hidden__container">
                   <h5 className="design__colors--subtitle">Colores</h5>
@@ -59,7 +60,7 @@ class App extends React.Component {
                     <i className="far fa-keyboard fill__header--icon"></i>
                     Rellena
                   </h2>
-                  <img className="up-icon" src="./assets/images/monstera.png" />
+                  <img className="up-icon" src={leaf} />
                 </div>
                 <div className="fill__form hidden__container">
                   <h6 className="fill__form--notice">
