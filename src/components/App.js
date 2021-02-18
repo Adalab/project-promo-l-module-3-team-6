@@ -1,11 +1,12 @@
-import React from 'react';
-import Header from './Header';
-import '../stylesheets/App.css';
-import Palette from './Palette';
-import CardPreview from './CardPreview';
-import Navigation from './Navigation';
-import Share from './Share';
-import Footer from './Footer';
+import React from "react";
+import Header from "./Header";
+import "../stylesheets/App.css";
+import Palette from "./Palette";
+import CardPreview from "./CardPreview";
+import Navigation from "./Navigation";
+import Share from "./Share";
+import Footer from "./Footer";
+import Collapsable from "./Collapsable";
 
 class App extends React.Component {
   /*   constructor(props) {
@@ -36,13 +37,7 @@ class App extends React.Component {
           <section className="app__custom">
             <form method="post" className="app__form js-submit">
               <fieldset className="design js-collapsable-container collapsable--close">
-                <div className="design__header js-collapsable-header">
-                  <h2 className="design__header--text">
-                    <i className="design__header--text-icon far fa-object-ungroup"></i>
-                    Diseña
-                  </h2>
-                  <img className="up-icon" src="./assets/images/monstera.png" />
-                </div>
+                <Collapsable />
                 <div className="design__colors hidden__container">
                   <h5 className="design__colors--subtitle">Colores</h5>
                   <div className="design__colors--palettes">
