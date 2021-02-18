@@ -27,7 +27,7 @@ class App extends React.Component {
                 job="Puesto"
                 numberPalette="1"
               />
-              <Navigation />
+              <Navigation numberPalette="1" />
             </div>
           </section>
 

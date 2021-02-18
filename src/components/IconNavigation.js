@@ -14,7 +14,7 @@ class IconNavigation extends React.Component {
         <a
           target="_blank"
           href={this.props.href}
-          alt={this.props.alt}
+          alt={this.props.jsClass}
           className={`js-preview-${this.props.jsClass}`}
         >
           <i

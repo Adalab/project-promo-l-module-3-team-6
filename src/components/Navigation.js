@@ -12,30 +12,26 @@ class Navigation extends React.Component {
       <nav className="card__preview--nav">
         <ul className="card__socialmedia">
           <IconNavigation
-            numberPalette="1"
+            numberPalette={this.props.numberPalette}
             jsClass="phone"
-            alt="mobile"
             icon="fas fa-mobile-alt"
             href="#"
           />
           <IconNavigation
-            numberPalette="1"
+            numberPalette={this.props.numberPalette}
             jsClass="email"
-            alt="email"
             icon="far fa-envelope"
             href="#"
           />
           <IconNavigation
-            numberPalette="1"
+            numberPalette={this.props.numberPalette}
             jsClass="linkedin"
-            alt="linkedin"
             icon="fab fa-linkedin-in"
             href="#"
           />
           <IconNavigation
-            numberPalette="1"
+            numberPalette={this.props.numberPalette}
             jsClass="github"
-            alt="github"
             icon="fab fa-github-alt"
             href="#"
           />
