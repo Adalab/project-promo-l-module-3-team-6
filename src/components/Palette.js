@@ -1,5 +1,5 @@
-import React from 'react';
-import '../stylesheets/App.css';
+import React from "react";
+import "../stylesheets/App.css";
 
 class Palette extends React.Component {
   constructor(props) {
@@ -10,7 +10,10 @@ class Palette extends React.Component {
   render() {
     return (
       <div className={`palette palette${this.props.numberPalette}`}>
-        <label className="cursor" for={`palette${this.props.numberPalette}`}>
+        <label
+          className="cursor"
+          htmlFor={`palette${this.props.numberPalette}`}
+        >
           <input
             id={`palette${this.props.numberPalette}`}
             type="radio"

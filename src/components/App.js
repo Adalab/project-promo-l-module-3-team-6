@@ -106,14 +106,14 @@ class App extends React.Component {
                 </div>
                 <Fill
                   required="Todos los campos son obligatorios"
-                  name="Nombre Completo"
-                  job="Puesto"
-                  image="Imagen de perfil"
-                  btnImage="Añadir imagen"
-                  mail="Email"
-                  tel="Teléfono"
-                  linkedin="Linkedin"
-                  git="Github"
+                  labelname="Nombre Completo"
+                  labeljob="Puesto"
+                  labelImage="Imagen de perfil"
+                  labelbtnImage="Añadir imagen"
+                  labelemail="Email"
+                  labeltel="Teléfono"
+                  labellinkedin="Linkedin"
+                  labelgit="Github"
                 />
               </fieldset>
 
