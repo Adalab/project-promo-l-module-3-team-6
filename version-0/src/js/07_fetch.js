@@ -24,7 +24,7 @@ createBtn.addEventListener('click', handleCreateBtn);
 formSubmit.addEventListener('submit', handleCreateBtn);
 
 function fetchAPI() {
-  const url = 'https://profileawesome.herokuapp.com/card';
+  const url = 'https://awesome-profile-cards.herokuapp.com/card';
   // eslint-disable-next-line no-undef
   const data = getUserData();
   fetch(url, {
@@ -42,7 +42,8 @@ function fetchAPI() {
         const linkElement = document.querySelector('.js-card-link');
         linkElement.innerHTML = `<a href="${shareLink}" class="share__result--link js-card-link" target="_blank">${shareLink}</a>;`;
       } else {
-        cardResult.innerHTML = 'Debes cumplimentar todos los campos para poder crear tu enlace';
+        cardResult.innerHTML =
+          'Debes cumplimentar todos los campos para poder crear tu enlace';
       }
     });
 }

@@ -1,0 +1,18 @@
+.collapsable--close {
+  .hidden__container {
+    display: none;
+  }
+  .fa-chevron-up {
+    transform: rotate(180deg);
+  }
+
+  .up-icon{
+    transform: rotate(180deg);
+  }
+}
+
+.up-icon{
+  height: 35px;
+  width: 35px;
+  background: none;
+}
