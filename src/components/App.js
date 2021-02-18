@@ -1,8 +1,10 @@
-import React from "react";
-import Header from "./Header";
-import "../stylesheets/App.css";
-import Palette from "./Palette";
-import Footer from "./Footer";
+import React from 'react';
+import Header from './Header';
+import '../stylesheets/App.css';
+import Palette from './Palette';
+import CardPreview from './CardPreview';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -21,59 +23,12 @@ class App extends React.Component {
               Reset
             </button>
             <div className="card__preview js-card">
-              <div className="card__preview--text js-palette1 js-palette resetColorPalette">
-                <h3 className="card__preview--text-name js-preview-name previewCardName">
-                  Nombre Completo
-                </h3>
-                <h4 className="card__preview--text-job js-preview-job">
-                  Puesto
-                </h4>
-              </div>
-              <div className="card__preview--photo js__profile-image"></div>
-              <nav className="card__preview--nav">
-                <ul className="card__socialmedia">
-                  <li className="card__socialmedia--item js-border-palette1-color3 js-phone pale__icon">
-                    <a
-                      target="_blank"
-                      href="#"
-                      alt="mobile"
-                      className="js-preview-phone"
-                    >
-                      <i className="card__socialmedia--link fas fa-mobile-alt js-icon-palette1-color2"></i>
-                    </a>
-                  </li>
-                  <li className="card__socialmedia--item js-border-palette1-color3 opacity js-email">
-                    <a
-                      target="_blank"
-                      href="mailto:"
-                      alt="email"
-                      className="js-preview-email"
-                    >
-                      <i className="card__socialmedia--link far fa-envelope js-icon-palette1-color2"></i>
-                    </a>
-                  </li>
-                  <li className="card__socialmedia--item js-border-palette1-color3 opacity js-linkedin pale__icon">
-                    <a
-                      target="_blank"
-                      href="#"
-                      alt="linkedin"
-                      className="js-preview-linkedin"
-                    >
-                      <i className="card__socialmedia--link fab fa-linkedin-in js-icon-palette1-color2"></i>
-                    </a>
-                  </li>
-                  <li className="card__socialmedia--item js-border-palette1-color3 opacity js-github pale__icon">
-                    <a
-                      target="_blank"
-                      href="#"
-                      alt="github"
-                      className="js-preview-github"
-                    >
-                      <i className="card__socialmedia--link fab fa-github-alt js-icon-palette1-color2"></i>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+              <CardPreview
+                name="Nombre Completo"
+                job="Puesto"
+                numberPalette="1"
+              />
+              <Navigation numberPalette="1" />
             </div>
           </section>
 
