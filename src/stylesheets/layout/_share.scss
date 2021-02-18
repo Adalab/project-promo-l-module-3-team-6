@@ -1,0 +1,132 @@
+.share {
+  padding: 0 19px 30px 20px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  
+
+  @include tablet {
+    padding-left: 40px;
+    padding-right: 30px;
+    // width: 50vw;
+  }
+
+  @include desktop {
+    // width: 40vw;
+  }
+
+  &__header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $smaller-text;
+    border-top: $border-lines solid 1px;
+    padding-top: 10px;
+    cursor: pointer;
+
+    :hover {
+      transform: scale(1.04);
+      color: $button-hover;
+    }
+
+    &--icon {
+      color: $icons;
+      padding-right: 5px;
+    }
+
+    &--title {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-family: $font-text;
+      font-weight: 600;
+    }
+
+    &--arrow {
+      font-size: 18px;
+    }
+  }
+
+  &__create {
+    display: flex;
+    border-bottom: $border-lines solid 1px;
+    justify-content: center;  
+
+    &--button {
+      width: 199px;
+      height: 50px;
+      border-radius: 12px;
+      background: $icons;
+      color: $color-bg-2;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      cursor: pointer;
+      &:hover {
+        background: $button-hover;
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  &__result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-text;
+    border-bottom: $border-lines solid 1px;
+
+    &--title {
+      color: $smaller-text;
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    &--text {
+      font-size: 13px;
+      text-align: center;
+      color: $icons;
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+
+    &--link {
+      color: $icons;
+      &:hover {
+        color: #ff2600;
+      }
+    }
+
+    &--twitter {
+      width: 181px;
+      height: 30px;
+      background: $twitter-brand;
+      border-radius: 3px;
+      color: $color-bg-2;
+      margin: 10px 0 30px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.04);
+        font-size: 18px;
+      }
+    }
+
+    &--twitterlink {
+        color: $color-bg-2;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: $font-text;
+        padding-left: 5px;
+      }
+  }
+
+  .js-share-hidden {
+    display: none;
+  }
+  .js-create-hidden {
+    background: $border-lines;
+  }
+}
