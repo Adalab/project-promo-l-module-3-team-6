@@ -1,16 +1,16 @@
-import React from "react";
-import Header from "./Header";
-import "../stylesheets/App.css";
-import Palette from "./Palette";
-import CardPreview from "./CardPreview";
-import Navigation from "./Navigation";
-import Share from "./Share";
-import Footer from "./Footer";
+import React from 'react';
+import Header from './Header';
+import '../stylesheets/App.css';
+import Palette from './Palette';
+import CardPreview from './CardPreview';
+import Navigation from './Navigation';
+import Share from './Share';
+import Footer from './Footer';
 
 class App extends React.Component {
-  constructor(props) {
+  /*   constructor(props) {
     super(props);
-  }
+  } */
 
   render() {
     return (

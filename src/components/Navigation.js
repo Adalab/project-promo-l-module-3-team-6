@@ -3,9 +3,9 @@ import '../stylesheets/App.css';
 import IconNavigation from './IconNavigation';
 
 class Navigation extends React.Component {
-  constructor(props) {
+  /*   constructor(props) {
     super(props);
-  }
+  } */
 
   render() {
     return (
