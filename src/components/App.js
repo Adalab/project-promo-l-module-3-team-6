@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import "../stylesheets/App.css";
+//import "../stylesheets/App.scss";
 import Palette from "./Palette";
 import CardPreview from "./CardPreview";
 import Navigation from "./Navigation";

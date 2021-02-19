@@ -1,6 +1,6 @@
-import React from 'react';
-import '../stylesheets/App.css';
-import logo from '../images/logo-treehuggers.png';
+import React from "react";
+//import "../stylesheets/App.scss";
+import logo from "../images/logo-treehuggers.png";
 
 class Header extends React.Component {
   constructor(props) {
