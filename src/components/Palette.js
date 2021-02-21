@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/App.css';
+/* import '../stylesheets/App.css'; */
 
 class Palette extends React.Component {
   constructor(props) {

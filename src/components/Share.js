@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/App.css';
+/* import '../stylesheets/App.css'; */
 import logo from '../images/logo-treehuggers.png';
 
 class Share extends React.Component {
@@ -9,11 +9,12 @@ class Share extends React.Component {
 
   render() {
     return (
-        <fieldset className="share js-collapsable-container collapsable--close">
+      <fieldset className="share js-collapsable-container collapsable--close">
         <div className="share__header js-collapsable-header">
           <h2 className="share__header--title">
             <i className="fas fa-share-alt share__header--icon js-arrow-share js-arrow-up"></i>
-            Comparte </h2>
+            Comparte{' '}
+          </h2>
           <img className="up-icon" src="./assets/images/monstera.png" />
         </div>
 
@@ -25,9 +26,7 @@ class Share extends React.Component {
         </div>
 
         <div className="share__result js-twitter-share js-share-hidden">
-          <h3 className="share__result--title">
-            La tarjeta ha sido creada:
-          </h3>
+          <h3 className="share__result--title">La tarjeta ha sido creada:</h3>
           <p className="share__result--text js-card-link"></p>
 
           <button
@@ -51,5 +50,3 @@ class Share extends React.Component {
 }
 
 export default Share;
-
-

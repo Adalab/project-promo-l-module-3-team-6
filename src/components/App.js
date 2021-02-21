@@ -1,11 +1,12 @@
 import React from 'react';
 import Header from './Header';
-import '../stylesheets/App.css';
+/* import '../stylesheets/App.css'; */
 import Palette from './Palette';
 import CardPreview from './CardPreview';
 import Navigation from './Navigation';
 import Share from './Share';
 import Footer from './Footer';
+import Reset from './Reset';
 
 class App extends React.Component {
   /*   constructor(props) {
@@ -19,10 +20,7 @@ class App extends React.Component {
 
         <main className="app">
           <section className="app__card">
-            <button className="card__reset js-reset" type="reset">
-              <i className="far fa-trash-alt card__reset--icon"></i>
-              Reset
-            </button>
+            <Reset />
             <div className="card__preview js-card">
               <CardPreview
                 name="Nombre Completo"

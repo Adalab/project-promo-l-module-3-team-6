@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/App.css';
+import '../stylesheets/layout/_card-preview.scss';
 
 class CardPreview extends React.Component {
   constructor(props) {
