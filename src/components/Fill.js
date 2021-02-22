@@ -11,15 +11,8 @@ class Fill extends React.Component {
 
   render() {
     return (
-      <fielset className="fill js-collapsable-container">
-        <Collapsable />
-        {/*         <div class="fill__header js-collapsable-header">
-    <h2 class="fill__header--title">
-      <i class="far fa-keyboard fill__header--icon"></i>
-      Rellena
-    </h2>
-    <img class="up-icon" src="./assets/images/monstera.png" />
-  </div> */}
+      <fieldset className="fill js-collapsable-container collapsable--close">
+        <Collapsable title="Rellena" classValue="fill" icon="far fa-keyboard" />
         <div className="fill__form hidden__container">
           <h6 className="fill__form--notice">{this.props.required}</h6>
           <InputForm
@@ -65,7 +58,7 @@ class Fill extends React.Component {
             placeholder="Ej: @treeHuggers"
           />
         </div>
-      </fielset>
+      </fieldset>
     );
   }
 }

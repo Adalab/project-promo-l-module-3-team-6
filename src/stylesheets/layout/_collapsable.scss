@@ -1,17 +1,17 @@
 .collapsable--close {
-  .hidden__container {
+  /*   .hidden__container {
     display: none;
-  }
+  } */
   .fa-chevron-up {
     transform: rotate(180deg);
   }
 
-  .up-icon{
+  .up-icon {
     transform: rotate(180deg);
   }
 }
 
-.up-icon{
+.up-icon {
   height: 35px;
   width: 35px;
   background: none;

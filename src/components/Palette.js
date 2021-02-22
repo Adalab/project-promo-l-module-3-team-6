@@ -19,7 +19,6 @@ class Palette extends React.Component {
             value="1"
             name="palette"
             className="js-palette cursor"
-            checked
           />
           <div
             className={`palette${this.props.numberPalette}__color1 color-box`}

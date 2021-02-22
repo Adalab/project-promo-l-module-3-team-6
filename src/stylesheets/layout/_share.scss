@@ -1,50 +1,37 @@
 @import '../core/_core.scss';
 
 .share {
-  padding: 0 19px 30px 20px;
-  border: none;
-  display: flex;
-  flex-direction: column;
-
+  padding: 27px 20px 0;
+  font-family: $font-text;
+  text-transform: uppercase;
+  color: $smaller-text;
   @include tablet {
-    padding-left: 40px;
-    padding-right: 30px;
-    // width: 50vw;
+    // width: 233px;
+    padding: 27px 30px 0 40px;
   }
-
   @include desktop {
     // width: 40vw;
   }
-
   &__header {
-    margin-bottom: 30px;
+    padding-bottom: 10px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    color: $smaller-text;
-    border-top: $border-lines solid 1px;
-    padding-top: 10px;
+    justify-content: space-between;
+    font-size: 18px;
     cursor: pointer;
-
     :hover {
       transform: scale(1.04);
       color: $button-hover;
     }
-
-    &--icon {
-      color: $icons;
-      padding-right: 5px;
-    }
-
-    &--title {
-      text-transform: uppercase;
-      font-size: 18px;
-      font-family: $font-text;
+    &--text {
       font-weight: 600;
-    }
-
-    &--arrow {
       font-size: 18px;
+      display: inline;
+      &-icon {
+        color: $icons;
+        padding-right: 10px;
+      }
     }
   }
 

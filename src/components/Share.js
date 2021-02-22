@@ -12,14 +12,11 @@ class Share extends React.Component {
   render() {
     return (
       <fieldset className="share js-collapsable-container collapsable--close">
-        <Collapsable />
-        {/*         <div className="share__header js-collapsable-header">
-          <h2 className="share__header--title">
-            <i className="fas fa-share-alt share__header--icon js-arrow-share js-arrow-up"></i>
-            Comparte{' '}
-          </h2>
-          <img className="up-icon" src={leaf} />
-        </div> */}
+        <Collapsable
+          title="Comparte"
+          classValue="share"
+          icon="fas fa-share-alt"
+        />
 
         <div className="share__create hidden__container">
           <button className="share__create--button js-create-btn">

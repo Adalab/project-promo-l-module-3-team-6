@@ -9,7 +9,7 @@ import Navigation from './Navigation';
 import Share from './Share';
 import Footer from './Footer';
 /* import leaf from '../images/monstera.png'; */
-import Collapsable from './Collapsable';
+
 import Reset from './Reset';
 
 class App extends React.Component {

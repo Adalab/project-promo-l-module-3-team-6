@@ -9,10 +9,12 @@ class Collapsable extends React.Component {
 
   render() {
     return (
-      <div className="design__header js-collapsable-header">
-        <h2 className="design__header--text">
-          <i className="design__header--text-icon far fa-object-ungroup"></i>
-          Diseña
+      <div className={`${this.props.classValue}__header js-collapsable-header`}>
+        <h2 className={`${this.props.classValue}__header--text`}>
+          <i
+            className={`${this.props.classValue}__header--text-icon ${this.props.icon}`}
+          ></i>
+          {this.props.title}
         </h2>
         <img className="up-icon" src={leaf} />
       </div>
