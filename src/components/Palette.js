@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 // import "../stylesheets/App.css";
 
 class Palette extends React.Component {

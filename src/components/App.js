@@ -1,15 +1,16 @@
-import React from "react";
-import Header from "./Header";
-import Fill from "./Fill";
+import React from 'react';
+import Header from './Header';
+import Fill from './Fill';
 //import "../stylesheets/App.css";
-import Desing from "./Desing";
-import Palette from "./Palette";
-import CardPreview from "./CardPreview";
-import Navigation from "./Navigation";
-import Share from "./Share";
-import Footer from "./Footer";
-import leaf from "../images/monstera.png";
-import Collapsable from "./Collapsable";
+import Desing from './Desing';
+/* import Palette from './Palette'; */
+import CardPreview from './CardPreview';
+import Navigation from './Navigation';
+import Share from './Share';
+import Footer from './Footer';
+/* import leaf from '../images/monstera.png'; */
+import Collapsable from './Collapsable';
+import Reset from './Reset';
 
 class App extends React.Component {
   /*   constructor(props) {
@@ -22,10 +23,7 @@ class App extends React.Component {
         <Header />
         <main className="app">
           <section className="app__card">
-            <button className="card__reset js-reset" type="reset">
-              <i className="far fa-trash-alt card__reset--icon"></i>
-              Reset
-            </button>
+            <Reset />
             <div className="card__preview js-card">
               <CardPreview
                 name="Nombre Completo"
@@ -40,26 +38,17 @@ class App extends React.Component {
             <form method="post" className="app__form js-submit">
               <Desing />
 
-              <fieldset className="fill js-collapsable-container">
-                <div className="fill__header js-collapsable-header">
-                  <h2 className="fill__header--title">
-                    <i className="far fa-keyboard fill__header--icon"></i>
-                    Rellena
-                  </h2>
-                  <img className="up-icon" src={leaf} />
-                </div>
-                <Fill
-                  required="Todos los campos son obligatorios"
-                  labelname="Nombre Completo"
-                  labeljob="Puesto"
-                  labelImage="Imagen de perfil"
-                  labelbtnImage="Añadir imagen"
-                  labelemail="Email"
-                  labeltel="Teléfono"
-                  labellinkedin="Linkedin"
-                  labelgit="Github"
-                />
-              </fieldset>
+              <Fill
+                required="Todos los campos son obligatorios"
+                labelname="Nombre Completo"
+                labeljob="Puesto"
+                labelImage="Imagen de perfil"
+                labelbtnImage="Añadir imagen"
+                labelemail="Email"
+                labeltel="Teléfono"
+                labellinkedin="Linkedin"
+                labelgit="Github"
+              />
 
               <Share />
             </form>

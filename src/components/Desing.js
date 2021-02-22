@@ -1,6 +1,8 @@
-import React from "react";
-import Palette from "./Palette";
-
+import React from 'react';
+import Palette from './Palette';
+import '../stylesheets/layout/_design.scss';
+import leaf from '../images/monstera.png';
+import Collapsable from './Collapsable';
 class Desing extends React.Component {
   /*   constructor(props) {
     super(props);
@@ -9,13 +11,14 @@ class Desing extends React.Component {
   render() {
     return (
       <fieldset className="design js-collapsable-container collapsable--close">
-        <div className="design__header js-collapsable-header">
+        <Collapsable />
+        {/*         <div className="design__header js-collapsable-header">
           <h2 className="design__header--text">
             <i className="design__header--text-icon far fa-object-ungroup"></i>
             Diseña
           </h2>
-          <img className="up-icon" src="./assets/images/monstera.png" />
-        </div>
+          <img className="up-icon" src={leaf} />
+        </div> */}
         <div className="design__colors hidden__container">
           <h5 className="design__colors--subtitle">Colores</h5>
           <div className="design__colors--palettes">

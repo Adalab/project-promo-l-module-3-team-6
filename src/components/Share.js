@@ -1,6 +1,8 @@
-import React from "react";
+import React from 'react';
 //import "../stylesheets/pages/App.scss";
-import leaf from "../images/monstera.png";
+import '../stylesheets/layout/_share.scss';
+import leaf from '../images/monstera.png';
+import Collapsable from './Collapsable';
 
 class Share extends React.Component {
   constructor(props) {
@@ -10,13 +12,14 @@ class Share extends React.Component {
   render() {
     return (
       <fieldset className="share js-collapsable-container collapsable--close">
-        <div className="share__header js-collapsable-header">
+        <Collapsable />
+        {/*         <div className="share__header js-collapsable-header">
           <h2 className="share__header--title">
             <i className="fas fa-share-alt share__header--icon js-arrow-share js-arrow-up"></i>
-            Comparte{" "}
+            Comparte{' '}
           </h2>
           <img className="up-icon" src={leaf} />
-        </div>
+        </div> */}
 
         <div className="share__create hidden__container">
           <button className="share__create--button js-create-btn">

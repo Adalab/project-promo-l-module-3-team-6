@@ -1,5 +1,6 @@
-import React from "react";
-import leaf from "../images/monstera.png";
+import React from 'react';
+import '../stylesheets/layout/_collapsable.scss';
+import leaf from '../images/monstera.png';
 
 class Collapsable extends React.Component {
   /*   constructor(props) {

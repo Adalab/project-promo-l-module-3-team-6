@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 // import '../stylesheets/App.css';
-import IconNavigation from "./IconNavigation";
+import IconNavigation from './IconNavigation';
 
 class Navigation extends React.Component {
   /*   constructor(props) {
