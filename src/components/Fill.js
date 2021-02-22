@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/App.css";
+import "../stylesheets/layout/_fill.scss";
 import InputForm from "./InputForm";
 import InputImage from "./InputImage";
 

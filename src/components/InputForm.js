@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/App.css";
+import "../stylesheets/layout/_fill.scss";
 
 class InputForm extends React.Component {
   constructor(props) {

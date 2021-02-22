@@ -1,12 +1,11 @@
 import React from "react";
-import "../stylesheets/App.css";
+// import "../stylesheets/App.css";
 
 class Palette extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  /*     class = `palette palette ${this.props.numberPalette}` */
   render() {
     return (
       <div className={`palette palette${this.props.numberPalette}`}>

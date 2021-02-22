@@ -1,4 +1,4 @@
-* {
+ {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -29,9 +29,9 @@
   }
 }
 
-/* .collapsable--close .hidden__container {
+.collapsable--close .hidden__container {
   display: none;
-} */
+}
 
 .collapsable--close .fa-chevron-up {
   transform: rotate(180deg);
@@ -72,7 +72,7 @@
   background-color: #bfcdd0;
   text-transform: uppercase;
   font-size: 12px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #54585a;
   padding: 6px 12px 6px 8px;
   cursor: pointer;
@@ -113,7 +113,7 @@
   line-height: 1.11;
   font-size: 18px;
   text-align: left;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 .card__preview--text-job {
@@ -123,7 +123,7 @@
   line-height: 1.25;
   font-size: 16px;
   text-align: left;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .pale_icon {
@@ -274,7 +274,7 @@
 
 .design {
   padding: 27px 20px 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   color: #54585a;
 }
@@ -384,7 +384,7 @@
 .fill {
   padding: 0 19px 0px 20px;
   border: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 1.43;
 }
@@ -415,7 +415,7 @@
 .fill__header--title {
   text-transform: uppercase;
   font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
 .fill__header--arrow {
@@ -424,7 +424,7 @@
 .fill__header--title {
   text-transform: uppercase;
   font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
 .fill__header--arrow {
@@ -458,17 +458,17 @@
 .fill__form ::-moz-placeholder {
   font-size: 14px;
   color: #c5c5c5;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .fill__form ::-ms-input-placeholder {
   font-size: 14px;
   color: #c5c5c5;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .fill__form ::placeholder {
   font-size: 14px;
   color: #c5c5c5;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .fill__form :focus {
   outline: 0 none;
@@ -537,7 +537,7 @@
 .share__header--title {
   text-transform: uppercase;
   font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
 .share__header--arrow {
@@ -568,7 +568,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   border-bottom: #d8d8d8 solid 1px;
 }
 .share__result--title {
@@ -609,7 +609,7 @@
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding-left: 5px;
 }
 .share .js-share-hidden {
@@ -618,55 +618,3 @@
 .share .js-create-hidden {
   background: #d8d8d8;
 }
-
-.footer {
-  background: #ffffff;
-  border-top: solid 1px #d8d8d8;
-  height: 72px;
-}
-@media all and (min-width: 768px) {
-  .footer {
-    height: 22px;
-  }
-}
-.footer__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 0 10px 0;
-  align-content: center;
-  max-width: 1500px;
-}
-@media all and (min-width: 768px) {
-  .footer__container {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
-}
-.footer__copy {
-  font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  color: #6b6b6b;
-  line-height: 1.43;
-  opacity: 0.5;
-}
-@media all and (min-width: 768px) {
-  .footer__copy {
-    margin-left: 41px;
-  }
-}
-.footer__logo {
-  width: 103px;
-  margin-top: 10px;
-}
-@media all and (min-width: 768px) {
-  .footer__logo {
-    width: 90px;
-    margin-right: 40px;
-    margin-top: 0;
-  }
-}
-
-/*# sourceMappingURL=app.css.map */
