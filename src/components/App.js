@@ -36,6 +36,7 @@ class App extends React.Component {
 
           <section className="app__custom">
             <form method="post" className="app__form js-submit">
+              
               <Desing />
 
               <fieldset className="fill js-collapsable-container">
