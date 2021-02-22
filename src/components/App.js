@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import Fill from "./Fill";
+//import "../stylesheets/App.css";
+import Desing from "./Desing";
 import Palette from "./Palette";
 import CardPreview from "./CardPreview";
 import Navigation from "./Navigation";
@@ -34,23 +36,7 @@ class App extends React.Component {
 
           <section className="app__custom">
             <form method="post" className="app__form js-submit">
-              <fieldset className="design js-collapsable-container collapsable--close">
-                <div className="design__header js-collapsable-header">
-                  <h2 className="design__header--text">
-                    <i className="design__header--text-icon far fa-object-ungroup"></i>
-                    Diseña
-                  </h2>
-                  <img className="up-icon" src="./assets/images/monstera.png" />
-                </div>
-                <div className="design__colors hidden__container">
-                  <h5 className="design__colors--subtitle">Colores</h5>
-                  <div className="design__colors--palettes">
-                    <Palette numberPalette="1" />
-                    <Palette numberPalette="2" />
-                    <Palette numberPalette="3" />
-                  </div>
-                </div>
-              </fieldset>
+              <Desing />
 
               <fieldset className="fill js-collapsable-container">
                 <div className="fill__header js-collapsable-header">
