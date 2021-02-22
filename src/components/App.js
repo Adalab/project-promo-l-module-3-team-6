@@ -143,6 +143,7 @@ class App extends React.Component {
                   />
                 </div>
               </fieldset>
+
               <Share />
             </form>
           </section>
