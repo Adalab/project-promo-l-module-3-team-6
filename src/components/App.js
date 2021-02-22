@@ -9,6 +9,7 @@ import Navigation from "./Navigation";
 import Share from "./Share";
 import Footer from "./Footer";
 import leaf from "../images/monstera.png";
+import Collapsable from "./Collapsable";
 
 class App extends React.Component {
   /*   constructor(props) {
@@ -59,6 +60,7 @@ class App extends React.Component {
                   labelgit="Github"
                 />
               </fieldset>
+
               <Share />
             </form>
           </section>

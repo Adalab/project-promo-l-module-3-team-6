@@ -1,5 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+<<<<<<< HEAD
+=======
+import "./main.scss";
+>>>>>>> collapsable
 import App from "./components/App";
 
 ReactDOM.render(
