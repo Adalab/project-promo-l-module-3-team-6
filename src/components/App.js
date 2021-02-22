@@ -8,6 +8,7 @@ import CardPreview from "./CardPreview";
 import Navigation from "./Navigation";
 import Share from "./Share";
 import Footer from "./Footer";
+import leaf from "../images/monstera.png";
 
 class App extends React.Component {
   /*   constructor(props) {
@@ -44,7 +45,7 @@ class App extends React.Component {
                     <i className="far fa-keyboard fill__header--icon"></i>
                     Rellena
                   </h2>
-                  <img className="up-icon" src="./assets/images/monstera.png" />
+                  <img className="up-icon" src={leaf} />
                 </div>
                 <Fill
                   required="Todos los campos son obligatorios"

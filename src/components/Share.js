@@ -1,5 +1,6 @@
 import React from "react";
-import "../stylesheets/App.css";
+//import "../stylesheets/pages/App.scss";
+import leaf from "../images/monstera.png";
 
 class Share extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class Share extends React.Component {
             <i className="fas fa-share-alt share__header--icon js-arrow-share js-arrow-up"></i>
             Comparte{" "}
           </h2>
-          <img className="up-icon" src="./assets/images/monstera.png" />
+          <img className="up-icon" src={leaf} />
         </div>
 
         <div className="share__create hidden__container">
