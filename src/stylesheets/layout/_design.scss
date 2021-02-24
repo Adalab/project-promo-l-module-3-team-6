@@ -1,15 +1,14 @@
-@import '../core/_core.scss';
+@import "../core/_core.scss";
+
 .design {
   padding: 27px 20px 0;
   font-family: $font-text;
   text-transform: uppercase;
   color: $smaller-text;
   @include tablet {
-    // width: 233px;
     padding: 27px 30px 0 40px;
   }
   @include desktop {
-    // width: 40vw;
   }
   &__header {
     padding-bottom: 10px;

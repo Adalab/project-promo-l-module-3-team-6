@@ -1,14 +1,9 @@
-import React from 'react';
-import Palette from './Palette';
-import '../stylesheets/layout/_design.scss';
-import leaf from '../images/monstera.png';
-import Collapsable from './Collapsable';
+import React from "react";
+import Palette from "./Palette";
+import "../stylesheets/layout/_design.scss";
+import Collapsable from "./Collapsable";
 
 class Desing extends React.Component {
-  /*   constructor(props) {
-    super(props);
-  } */
-
   render() {
     return (
       <fieldset className="design js-collapsable-container collapsable--close">
