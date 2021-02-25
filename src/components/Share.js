@@ -11,8 +11,12 @@ class Share extends React.Component {
 
   render() {
     return (
-      <fieldset className="share js-collapsable-container collapsable--close">
+      <fieldset
+        className={`share js-collapsable-container ${this.props.dropdown}`}
+        id="share"
+      >
         <Collapsable
+          handleClick={this.props.handleClick}
           title="Comparte"
           classValue="share"
           icon="fas fa-share-alt"

@@ -1,59 +1,60 @@
 import React from "react";
-import Header from "./Header";
 import Fill from "./Fill";
 import Desing from "./Desing";
-import CardPreview from "./CardPreview";
-import Navigation from "./Navigation";
 import Share from "./Share";
-import Footer from "./Footer";
-import Reset from "./Reset";
 
 class Generator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    // this.state = {
+    //   dropdown: "collapsable--close",
+    // };
+    this.state = { isOpen: false };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState({});
+  handleClick(key) {
+    this.setState({ isOpen: !this.state.isOpen });
+    // if (key === "design") {
+    //   this.setState((changeDropdown) => {
+    //     let openDropdown;
+    //     if (changeDropdown.dropdown === "collapsable--close") {
+    //       openDropdown = "";
+    //     } else {
+    //       openDropdown = "collapsable--close";
+    //     }
+    //     return {
+    //       dropdown: openDropdown,
+    //     };
+    //   });
+    // }
   }
   render() {
+    // const openClassName = this.state.isOpen
+    //   ? "collapsable__open"
+    //   : "collapsable__close";
     return (
-      <>
-        <Header />
-        <main className="app">
-          <section className="app__card">
-            <Reset />
-            <div className="card__preview js-card">
-              <CardPreview
-                name="Nombre Completo"
-                job="Puesto"
-                numberPalette="1"
-              />
-              <Navigation numberPalette="1" />
-            </div>
-          </section>
-          <section className="app__custom">
-            <form method="post" className="app__form js-submit">
-              <Desing />
-              <Fill
-                required="Todos los campos son obligatorios"
-                labelname="Nombre Completo"
-                labeljob="Puesto"
-                labelImage="Imagen de perfil"
-                labelbtnImage="Añadir imagen"
-                labelemail="Email"
-                labeltel="Teléfono"
-                labellinkedin="Linkedin"
-                labelgit="Github"
-              />
-              <Share />
-            </form>
-          </section>
-        </main>
-        <Footer />
-      </>
+      <section className="app__custom">
+        <form method="post" className="app__form js-submit">
+          <Desing
+
+          // dropdown={this.state.dropdown}
+          // handleClick={this.handleClick}
+          />
+          <Fill
+            required="Todos los campos son obligatorios"
+            labelname="Nombre Completo"
+            labeljob="Puesto"
+            labelImage="Imagen de perfil"
+            labelbtnImage="Añadir imagen"
+            labelemail="Email"
+            labeltel="Teléfono"
+            labellinkedin="Linkedin"
+            labelgit="Github"
+          />
+          <Share />
+        </form>
+      </section>
     );
   }
 }

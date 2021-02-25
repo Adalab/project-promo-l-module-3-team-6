@@ -6,23 +6,15 @@ import Collapsable from "./Collapsable";
 class Desing extends React.Component {
   constructor(props) {
     super(props);
-    this.onClickDesign = this.onClickDesign.bind(this);
   }
-
-  onClickDesign() {
-    const classValue = document.querySelector(".design");
-    if (classValue.classList.contains("collapsable--close")) {
-      classValue.classList.remove("collapsable--close");
-    } else {
-      classValue.classList.add("collapsable--close");
-    }
-  }
-
   render() {
     return (
-      <fieldset className="design js-collapsable-container collapsable--close">
+      <fieldset
+        className={`design js-collapsable-container ${this.props.dropdown}`}
+        id="design"
+      >
         <Collapsable
-          handleClick={this.onClickDesign}
+          handleClick={this.props.handleClick}
           title="Diseña"
           classValue="design"
           icon="far fa-object-ungroup"

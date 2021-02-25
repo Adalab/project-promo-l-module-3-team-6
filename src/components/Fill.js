@@ -11,8 +11,16 @@ class Fill extends React.Component {
 
   render() {
     return (
-      <fieldset className="fill js-collapsable-container collapsable--close">
-        <Collapsable title="Rellena" classValue="fill" icon="far fa-keyboard" />
+      <fieldset
+        className={`fill js-collapsable-container ${this.props.dropdown}`}
+        id="fill"
+      >
+        <Collapsable
+          handleClick={this.props.handleClick}
+          title="Rellena"
+          classValue="fill"
+          icon="far fa-keyboard"
+        />
         <div className="fill__form hidden__container">
           <h6 className="fill__form--notice">{this.props.required}</h6>
           <InputForm
