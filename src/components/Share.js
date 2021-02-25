@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 //import "../stylesheets/pages/App.scss";
-import '../stylesheets/layout/_share.scss';
-import leaf from '../images/monstera.png';
-import Collapsable from './Collapsable';
+import "../stylesheets/layout/_share.scss";
+import leaf from "../images/monstera.png";
+import Collapsable from "./Collapsable";
 
 class Share extends React.Component {
   constructor(props) {
