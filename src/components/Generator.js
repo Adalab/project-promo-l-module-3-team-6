@@ -1,12 +1,10 @@
-import React from "react";
-import Header from "./Header";
-import Fill from "./Fill";
-import Desing from "./Desing";
-import CardPreview from "./CardPreview";
-import Navigation from "./Navigation";
-import Share from "./Share";
-import Footer from "./Footer";
-import Reset from "./Reset";
+import React from 'react';
+import Header from './Header';
+import Fill from './Fill';
+import Desing from './Desing';
+import Card from './Card';
+import Share from './Share';
+import Footer from './Footer';
 
 class Generator extends React.Component {
   constructor(props) {
@@ -23,17 +21,7 @@ class Generator extends React.Component {
       <>
         <Header />
         <main className="app">
-          <section className="app__card">
-            <Reset />
-            <div className="card__preview js-card">
-              <CardPreview
-                name="Nombre Completo"
-                job="Puesto"
-                numberPalette="1"
-              />
-              <Navigation numberPalette="1" />
-            </div>
-          </section>
+          <Card />
           <section className="app__custom">
             <form method="post" className="app__form js-submit">
               <Desing />
