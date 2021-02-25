@@ -9,10 +9,7 @@ class Desing extends React.Component {
   }
   render() {
     return (
-      <fieldset
-        className={`design js-collapsable-container ${this.props.dropdown}`}
-        id="design"
-      >
+      <>
         <Collapsable
           handleClick={this.props.handleClick}
           title="Diseña"
@@ -27,7 +24,7 @@ class Desing extends React.Component {
             <Palette numberPalette="3" />
           </div>
         </div>
-      </fieldset>
+      </>
     );
   }
 }

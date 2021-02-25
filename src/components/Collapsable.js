@@ -5,10 +5,10 @@ import leaf from "../images/monstera.png";
 class Collapsable extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    this.handleDropdown = this.handleDropdown.bind(this);
   }
 
-  handleClick() {
+  handleDropdown() {
     this.props.handleClick();
   }
 
@@ -16,7 +16,7 @@ class Collapsable extends React.Component {
     return (
       <div
         className={`${this.props.classValue}__header js-collapsable-header`}
-        onClick={this.handleClick}
+        onClick={this.handleDropdown}
       >
         <h2 className={`${this.props.classValue}__header--text`}>
           <i
