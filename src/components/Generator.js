@@ -9,22 +9,42 @@ import Footer from './Footer';
 class Generator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      numberPaletteActivated: '1',
+      name: 'Nombre Completo',
+      job: 'Puesto',
+      phone: '',
+      email: '',
+      linkedin: '',
+      github: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleClick() {
-    this.setState({});
+  handleChange(nameInput, valueInput) {
+    this.setState({ [nameInput]: valueInput });
   }
+
   render() {
     return (
       <>
         <Header />
         <main className="app">
-          <Card />
+          <Card
+            numberPaletteActivated={this.state.numberPaletteActivated}
+            name={this.state.name}
+            job={this.state.job}
+            phone={this.state.phone}
+            email={this.state.email}
+            linkedin={this.state.linkedin}
+            github={this.state.github}
+          />
           <section className="app__custom">
             <form method="post" className="app__form js-submit">
-              <Desing />
+              <Desing
+                numberPaletteActivated={this.state.numberPaletteActivated}
+                handleChange={this.handleChange}
+              />
               <Fill
                 required="Todos los campos son obligatorios"
                 labelname="Nombre Completo"
@@ -35,6 +55,7 @@ class Generator extends React.Component {
                 labeltel="Teléfono"
                 labellinkedin="Linkedin"
                 labelgit="Github"
+                handleChange={this.handleChange}
               />
               <Share />
             </form>

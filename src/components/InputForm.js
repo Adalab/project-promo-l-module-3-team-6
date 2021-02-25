@@ -1,17 +1,22 @@
-import React from "react";
-import "../stylesheets/layout/_fill.scss";
+import React from 'react';
+import '../stylesheets/layout/_fill.scss';
 
 class InputForm extends React.Component {
   constructor(props) {
     super(props);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.checkInputValue = this.checkInputValue.bind(this);
+  }
+
+  checkInputValue(ev) {}
+
+  handleKeyUp(ev) {
+    this.props.handleChange(ev.target.name, ev.target.value);
   }
   render() {
     return (
       <>
-        <label
-          className="fill__form--label"
-          htmlFornpm={this.props.generalValue}
-        >
+        <label className="fill__form--label" htmlFor={this.props.generalValue}>
           {this.props.label}
         </label>
         <input
@@ -20,6 +25,8 @@ class InputForm extends React.Component {
           id={this.props.generalValue}
           name={this.props.generalValue}
           placeholder={this.props.placeholder}
+          pattern={this.props.pattern}
+          onKeyUp={this.handleKeyUp}
         />
       </>
     );

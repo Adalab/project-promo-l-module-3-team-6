@@ -8,8 +8,18 @@ class Card extends React.Component {
       <section className="app__card">
         <Reset />
         <div className="card__preview js-card">
-          <CardPreview name="Nombre Completo" job="Puesto" numberPalette="1" />
-          <Navigation numberPalette="1" />
+          <CardPreview
+            name={this.props.name}
+            job={this.props.job}
+            numberPalette={this.props.numberPaletteActivated}
+          />
+          <Navigation
+            numberPalette={this.props.numberPaletteActivated}
+            phone={this.props.phone}
+            email={this.props.email}
+            linkedin={this.props.linkedin}
+            github={this.props.github}
+          />
         </div>
       </section>
     );

@@ -1,6 +1,6 @@
-import React from "react";
-import "../stylesheets/layout/_collapsable.scss";
-import leaf from "../images/monstera.png";
+import React from 'react';
+import '../stylesheets/layout/_collapsable.scss';
+import leaf from '../images/monstera.png';
 
 class Collapsable extends React.Component {
   constructor(props) {
@@ -14,10 +14,7 @@ class Collapsable extends React.Component {
 
   render() {
     return (
-      <div
-        className={`${this.props.classValue}__header js-collapsable-header`}
-        onClick={this.handleClick}
-      >
+      <div className={`${this.props.classValue}__header js-collapsable-header`}>
         <h2 className={`${this.props.classValue}__header--text`}>
           <i
             className={`${this.props.classValue}__header--text-icon ${this.props.icon}`}

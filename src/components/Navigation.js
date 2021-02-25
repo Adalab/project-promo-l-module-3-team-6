@@ -15,25 +15,25 @@ class Navigation extends React.Component {
             numberPalette={this.props.numberPalette}
             jsClass="phone"
             icon="fas fa-mobile-alt"
-            href="#"
+            href={this.props.phone}
           />
           <IconNavigation
             numberPalette={this.props.numberPalette}
             jsClass="email"
             icon="far fa-envelope"
-            href="#"
+            href={this.props.email}
           />
           <IconNavigation
             numberPalette={this.props.numberPalette}
             jsClass="linkedin"
             icon="fab fa-linkedin-in"
-            href="#"
+            href={this.props.linkedin}
           />
           <IconNavigation
             numberPalette={this.props.numberPalette}
             jsClass="github"
             icon="fab fa-github-alt"
-            href="#"
+            href={this.props.github}
           />
         </ul>
       </nav>
