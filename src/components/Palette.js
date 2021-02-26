@@ -4,6 +4,12 @@ import React from 'react';
 class Palette extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    const clickedPalette = this.props.numberPalette;
+    this.props.handleChange('numberPaletteActivated', clickedPalette);
   }
 
   render() {
@@ -16,9 +22,13 @@ class Palette extends React.Component {
           <input
             id={`palette${this.props.numberPalette}`}
             type="radio"
-            value="1"
+            value={`palette${this.props.numberPalette}`}
             name="palette"
             className="js-palette cursor"
+            checked={
+              this.props.numberPaletteActivated === this.props.numberPalette
+            }
+            onChange={this.handleClick}
           />
           <div
             className={`palette${this.props.numberPalette}__color1 color-box`}

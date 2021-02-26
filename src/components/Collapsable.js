@@ -1,6 +1,6 @@
-import React from "react";
-import "../stylesheets/layout/_collapsable.scss";
-import leaf from "../images/monstera.png";
+import React from 'react';
+import '../stylesheets/layout/_collapsable.scss';
+import leaf from '../images/monstera.png';
 
 class Collapsable extends React.Component {
   constructor(props) {
@@ -17,8 +17,8 @@ class Collapsable extends React.Component {
   }
 
   render() {
-    const openClassName = this.props.openClassName ? "" : "hidden__container";
-    const arrowClassName = this.props.openClassName ? "" : "fa-chevron-up";
+    const openClassName = this.props.openClassName ? '' : 'hidden__container';
+    const arrowClassName = this.props.openClassName ? '' : 'fa-chevron-up';
     return (
       <>
         <div
