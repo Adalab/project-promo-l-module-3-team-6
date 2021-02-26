@@ -49,7 +49,7 @@ class Generator extends React.Component {
           />
           <section className="app__custom">
             <form method="post" className="app__form js-submit">
-              <fieldset className={`design js-collapsable-container"`}>
+              <fieldset className={`design js-collapsable-container`}>
                 <Collapsable
                   handleClick={this.changeCollapsable}
                   title="Diseña"
@@ -57,6 +57,7 @@ class Generator extends React.Component {
                   classValue="design"
                   icon="far fa-object-ungroup"
                   openClassName={this.state.design}
+                  /* this.state.collapsable.design */
                 >
                   <Desing
                     numberPaletteActivated={this.state.numberPaletteActivated}
@@ -87,7 +88,7 @@ class Generator extends React.Component {
                   />
                 </Collapsable>
               </fieldset>
-              <fieldset className={`share js-collapsable-container"`}>
+              <fieldset className={`share js-collapsable-container`}>
                 <Collapsable
                   handleClick={this.changeCollapsable}
                   title="Comparte"
