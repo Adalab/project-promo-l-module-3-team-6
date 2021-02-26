@@ -10,7 +10,7 @@ class Fill extends React.Component {
 
   render() {
     return (
-      <div className="fill__form hidden__container">
+      <div className="fill__form">
         <h6 className="fill__form--notice">{this.props.required}</h6>
         <InputForm
           label={this.props.labelname}

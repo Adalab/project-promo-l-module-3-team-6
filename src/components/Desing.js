@@ -8,7 +8,7 @@ class Desing extends React.Component {
   }
   render() {
     return (
-      <div className="design__colors hidden__container">
+      <div className="design__colors">
         <h5 className="design__colors--subtitle">Colores</h5>
         <div className="design__colors--palettes">
           <Palette numberPalette="1" />

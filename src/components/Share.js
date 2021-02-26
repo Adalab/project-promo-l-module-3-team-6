@@ -9,7 +9,7 @@ class Share extends React.Component {
   render() {
     return (
       <>
-        <div className="share__create hidden__container">
+        <div className="share__create">
           <button className="share__create--button js-create-btn">
             <i className="far fa-address-card share__button--icon"></i>
             Crear tarjeta
