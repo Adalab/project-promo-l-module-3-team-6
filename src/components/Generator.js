@@ -1,10 +1,10 @@
-import React from 'react';
-import Fill from './Fill';
-import Share from './Share';
-import Collapsable from './Collapsable';
-import Header from './Header';
-import Desing from './Desing';
-import Card from './Card';
+import React from "react";
+import Fill from "./Fill";
+import Share from "./Share";
+import Collapsable from "./Collapsable";
+import Header from "./Header";
+import Desing from "./Desing";
+import Card from "./Card";
 
 class Generator extends React.Component {
   constructor(props) {
@@ -13,16 +13,17 @@ class Generator extends React.Component {
       design: false,
       fill: false,
       share: false,
-      numberPaletteActivated: '1',
-      name: '',
-      job: '',
-      phone: '',
-      email: '',
-      linkedin: '',
-      github: '',
+      numberPaletteActivated: "1",
+      name: "",
+      job: "",
+      phone: "",
+      email: "",
+      linkedin: "",
+      github: "",
     };
     this.changeCollapsable = this.changeCollapsable.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   changeCollapsable(nameCollapsable, prevOpen) {
@@ -31,6 +32,19 @@ class Generator extends React.Component {
 
   handleChange(nameInput, valueInput) {
     this.setState({ [nameInput]: valueInput });
+  }
+
+  handleReset(nameInput) {
+    this.setState({
+      numberPaletteActivated: "1",
+      name: "",
+      job: "",
+      phone: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      [nameInput]: "",
+    });
   }
 
   render() {
@@ -46,6 +60,7 @@ class Generator extends React.Component {
             email={this.state.email}
             linkedin={this.state.linkedin}
             github={this.state.github}
+            handleReset={this.handleReset}
           />
           <section className="app__custom">
             <form method="post" className="app__form js-submit">
@@ -63,7 +78,7 @@ class Generator extends React.Component {
                     numberPaletteActivated={this.state.numberPaletteActivated}
                     handleChange={this.handleChange}
                   />
-                </Collapsable>{' '}
+                </Collapsable>{" "}
               </fieldset>
               <fieldset className={`fill js-collapsable-container`}>
                 <Collapsable

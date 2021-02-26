@@ -1,12 +1,12 @@
-import React from 'react';
-import CardPreview from './CardPreview';
-import Navigation from './Navigation';
-import Reset from './Reset';
+import React from "react";
+import CardPreview from "./CardPreview";
+import Navigation from "./Navigation";
+import Reset from "./Reset";
 class Card extends React.Component {
   render() {
     return (
       <section className="app__card">
-        <Reset />
+        <Reset handleReset={this.props.handleReset} />
         <div className="card__preview js-card">
           <CardPreview
             name={this.props.name}
