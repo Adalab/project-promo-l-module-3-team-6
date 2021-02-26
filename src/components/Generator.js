@@ -11,8 +11,8 @@ class Generator extends React.Component {
     super(props);
     this.state = {
       numberPaletteActivated: '1',
-      name: 'Nombre Completo',
-      job: 'Puesto',
+      name: '',
+      job: '',
       phone: '',
       email: '',
       linkedin: '',
