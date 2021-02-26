@@ -6,53 +6,53 @@ import Share from "./Share";
 class Generator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isOpen: false,
-      design: "design",
-      fill: "fill",
-      share: "share",
-    };
+    // this.state = {
+    //   dropdown: "collapsable--close",
+    // };
+    this.state = { isOpen: false };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  handleClick(key) {
     this.setState({ isOpen: !this.state.isOpen });
+    // if (key === "design") {
+    //   this.setState((changeDropdown) => {
+    //     let openDropdown;
+    //     if (changeDropdown.dropdown === "collapsable--close") {
+    //       openDropdown = "";
+    //     } else {
+    //       openDropdown = "collapsable--close";
+    //     }
+    //     return {
+    //       dropdown: openDropdown,
+    //     };
+    //   });
+    // }
   }
   render() {
-    const openClassName = this.state.isOpen ? "" : "collapsable--close";
-
+    // const openClassName = this.state.isOpen
+    //   ? "collapsable__open"
+    //   : "collapsable__close";
     return (
       <section className="app__custom">
         <form method="post" className="app__form js-submit">
-          <fieldset
-            className={`design js-collapsable-container" ${openClassName}`}
-            id="design"
-          >
-            <Desing handleClick={this.handleClick} />
-          </fieldset>
-          <fieldset
-            className={`fill js-collapsable-container" ${openClassName}`}
-            id="fill"
-          >
-            <Fill
-              required="Todos los campos son obligatorios"
-              labelname="Nombre Completo"
-              labeljob="Puesto"
-              labelImage="Imagen de perfil"
-              labelbtnImage="Añadir imagen"
-              labelemail="Email"
-              labeltel="Teléfono"
-              labellinkedin="Linkedin"
-              labelgit="Github"
-              handleClick={this.handleClick}
-            />
-          </fieldset>
-          <fieldset
-            className={`share js-collapsable-container" ${openClassName}`}
-            id="share"
-          >
-            <Share handleClick={this.handleClick} />
-          </fieldset>
+          <Desing
+
+          // dropdown={this.state.dropdown}
+          // handleClick={this.handleClick}
+          />
+          <Fill
+            required="Todos los campos son obligatorios"
+            labelname="Nombre Completo"
+            labeljob="Puesto"
+            labelImage="Imagen de perfil"
+            labelbtnImage="Añadir imagen"
+            labelemail="Email"
+            labeltel="Teléfono"
+            labellinkedin="Linkedin"
+            labelgit="Github"
+          />
+          <Share />
         </form>
       </section>
     );

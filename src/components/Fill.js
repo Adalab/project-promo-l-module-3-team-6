@@ -11,7 +11,10 @@ class Fill extends React.Component {
 
   render() {
     return (
-      <>
+      <fieldset
+        className={`fill js-collapsable-container ${this.props.dropdown}`}
+        id="fill"
+      >
         <Collapsable
           handleClick={this.props.handleClick}
           title="Rellena"
@@ -63,7 +66,7 @@ class Fill extends React.Component {
             placeholder="Ej: @treeHuggers"
           />
         </div>
-      </>
+      </fieldset>
     );
   }
 }
