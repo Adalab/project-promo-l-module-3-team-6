@@ -7,6 +7,16 @@ import Collapsable from "./Collapsable";
 class Generator extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      design: false,
+      fill: false,
+      share: false,
+    };
+    this.changeCollapsable = this.changeCollapsable.bind(this);
+  }
+
+  changeCollapsable(nameCollapsable, prevOpen) {
+    this.setState({ [nameCollapsable]: !prevOpen });
   }
 
   render() {
@@ -15,20 +25,24 @@ class Generator extends React.Component {
         <form method="post" className="app__form js-submit">
           <fieldset className={`design js-collapsable-container"`}>
             <Collapsable
-              handleClick={this.handleClick}
+              handleClick={this.changeCollapsable}
               title="Diseña"
+              name="design"
               classValue="design"
               icon="far fa-object-ungroup"
+              openClassName={this.state.design}
             >
               <Desing />
             </Collapsable>
           </fieldset>
           <fieldset className={`fill js-collapsable-container"`}>
             <Collapsable
-              handleClick={this.handleClick}
+              handleClick={this.changeCollapsable}
               title="Rellena"
+              name="fill"
               classValue="fill"
               icon="far fa-keyboard"
+              openClassName={this.state.fill}
             >
               <Fill
                 required="Todos los campos son obligatorios"
@@ -45,10 +59,12 @@ class Generator extends React.Component {
           </fieldset>
           <fieldset className={`share js-collapsable-container"`}>
             <Collapsable
-              handleClick={this.handleClick}
+              handleClick={this.changeCollapsable}
               title="Comparte"
+              name="share"
               classValue="share"
               icon="fas fa-share-alt"
+              openClassName={this.state.share}
             >
               <Share />
             </Collapsable>

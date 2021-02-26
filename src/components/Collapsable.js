@@ -11,18 +11,19 @@ class Collapsable extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState({ isOpen: !this.state.isOpen });
+  handleClick(ev) {
+    this.props.handleClick(ev.currentTarget.id, this.props.openClassName);
+    // this.setState({ isOpen: !this.state.isOpen });
   }
 
   render() {
-    const openClassName = this.state.isOpen ? "" : "hidden__container";
-    const arrowClassName = this.state.isOpen ? "" : "fa-chevron-up";
+    const openClassName = this.props.openClassName ? "" : "hidden__container";
+    const arrowClassName = this.props.openClassName ? "" : "fa-chevron-up";
     return (
       <>
         <div
           className={`${this.props.classValue}__header js-collapsable-header`}
-          id={this.props.id}
+          id={this.props.name}
           onClick={this.handleClick}
         >
           <h2 className={`${this.props.classValue}__header--text`}>

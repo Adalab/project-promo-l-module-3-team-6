@@ -8,10 +8,7 @@ class InputForm extends React.Component {
   render() {
     return (
       <>
-        <label
-          className="fill__form--label"
-          htmlFornpm={this.props.generalValue}
-        >
+        <label className="fill__form--label" htmlFor={this.props.generalValue}>
           {this.props.label}
         </label>
         <input
