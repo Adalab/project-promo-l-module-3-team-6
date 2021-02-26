@@ -5,10 +5,7 @@ class InputForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleKeyUp = this.handleKeyUp.bind(this);
-    this.checkInputValue = this.checkInputValue.bind(this);
   }
-
-  checkInputValue(ev) {}
 
   handleKeyUp(ev) {
     this.props.handleChange(ev.target.name, ev.target.value);
