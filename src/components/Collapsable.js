@@ -8,7 +8,7 @@ class Collapsable extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(z) {
+  handleClick() {
     this.props.handleClick();
   }
 
@@ -16,6 +16,7 @@ class Collapsable extends React.Component {
     return (
       <div
         className={`${this.props.classValue}__header js-collapsable-header`}
+        id={this.props.id}
         onClick={this.handleClick}
       >
         <h2 className={`${this.props.classValue}__header--text`}>
