@@ -1,25 +1,27 @@
-import React from "react";
-import Fill from "./Fill";
-import Share from "./Share";
-import Collapsable from "./Collapsable";
-import Header from "./Header";
-import Desing from "./Desing";
-import Card from "./Card";
+import React from 'react';
+import Fill from './Fill';
+import Share from './Share';
+import Collapsable from './Collapsable';
+import Header from './Header';
+import Desing from './Desing';
+import Card from './Card';
 
 class Generator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      design: false,
-      fill: false,
-      share: false,
-      numberPaletteActivated: "1",
-      name: "",
-      job: "",
-      phone: "",
-      email: "",
-      linkedin: "",
-      github: "",
+      collapsable: {
+        design: true,
+        fill: false,
+        share: false,
+      },
+      numberPaletteActivated: '1',
+      name: '',
+      job: '',
+      phone: '',
+      email: '',
+      linkedin: '',
+      github: '',
     };
     this.changeCollapsable = this.changeCollapsable.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -27,7 +29,25 @@ class Generator extends React.Component {
   }
 
   changeCollapsable(nameCollapsable, prevOpen) {
-    this.setState({ [nameCollapsable]: !prevOpen });
+    const collapsables = ['design', 'fill', 'share'];
+    const myCollapsableChanged = collapsables.filter(
+      (item) => item !== nameCollapsable
+    );
+    this.setState((prevState) => ({
+      collapsable: {
+        ...prevState.collapsable,
+        [nameCollapsable]: !prevOpen,
+      },
+    }));
+
+    for (let colap of myCollapsableChanged) {
+      this.setState((prevState) => ({
+        collapsable: {
+          ...prevState.collapsable,
+          [colap]: false,
+        },
+      }));
+    }
   }
 
   handleChange(nameInput, valueInput) {
@@ -36,15 +56,16 @@ class Generator extends React.Component {
 
   handleReset(nameInput) {
     this.setState({
-      numberPaletteActivated: "1",
-      name: "",
-      job: "",
-      phone: "",
-      email: "",
-      linkedin: "",
-      github: "",
-      [nameInput]: "",
+      numberPaletteActivated: '1',
+      name: '',
+      job: '',
+      phone: '',
+      email: '',
+      linkedin: '',
+      github: '',
     });
+    const form = document.querySelector('.app__form');
+    form.reset();
   }
 
   render() {
@@ -71,14 +92,14 @@ class Generator extends React.Component {
                   name="design"
                   classValue="design"
                   icon="far fa-object-ungroup"
-                  openClassName={this.state.design}
+                  openClassName={this.state.collapsable.design}
                   /* this.state.collapsable.design */
                 >
                   <Desing
                     numberPaletteActivated={this.state.numberPaletteActivated}
                     handleChange={this.handleChange}
                   />
-                </Collapsable>{" "}
+                </Collapsable>{' '}
               </fieldset>
               <fieldset className={`fill js-collapsable-container`}>
                 <Collapsable
@@ -87,7 +108,7 @@ class Generator extends React.Component {
                   name="fill"
                   classValue="fill"
                   icon="far fa-keyboard"
-                  openClassName={this.state.fill}
+                  openClassName={this.state.collapsable.fill}
                 >
                   <Fill
                     required="Todos los campos son obligatorios"
@@ -110,7 +131,7 @@ class Generator extends React.Component {
                   name="share"
                   classValue="share"
                   icon="fas fa-share-alt"
-                  openClassName={this.state.share}
+                  openClassName={this.state.collapsable.share}
                 >
                   <Share />
                 </Collapsable>

@@ -1,7 +1,7 @@
-import React from "react";
-import "../stylesheets/layout/_fill.scss";
-import InputForm from "./InputForm";
-import InputImage from "./InputImage";
+import React from 'react';
+import '../stylesheets/layout/_fill.scss';
+import InputForm from './InputForm';
+import InputImage from './InputImage';
 
 class Fill extends React.Component {
   constructor(props) {
