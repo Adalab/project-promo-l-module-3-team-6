@@ -1,19 +1,15 @@
-import React from 'react';
-import Header from './Header';
-import CardPreview from './CardPreview';
-import Navigation from './Navigation';
-import Generator from './Generator';
-import Footer from './Footer';
-import Reset from './Reset';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Generator from "./Generator";
+import Landing from "./Landing";
 
 class App extends React.Component {
   render() {
     return (
-      <>
-        <Generator />
-
-        <Footer />
-      </>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/Generator" component={Generator} />
+      </Switch>
     );
   }
 }

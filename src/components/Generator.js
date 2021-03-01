@@ -5,6 +5,7 @@ import Collapsable from "./Collapsable";
 import Header from "./Header";
 import Desing from "./Desing";
 import Card from "./Card";
+import Footer from "./Footer";
 
 class Generator extends React.Component {
   constructor(props) {
@@ -138,6 +139,7 @@ class Generator extends React.Component {
             </form>
           </section>
         </main>
+        <Footer />
       </>
     );
   }

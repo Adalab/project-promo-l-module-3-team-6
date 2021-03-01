@@ -1,22 +1,18 @@
+@import "../core/_core.scss";
 .main {
-  background: url(../images/leaves.jpg) no-repeat center;
+  background: url(../../images/leaves.jpg) no-repeat center;
   background-size: cover;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
   border: 1px #d8d8d8;
-  // padding: 95px 26px 110px;
-  height: 100vh;
-  
-  // @include tablet {
-  // padding-bottom: 59px; 
-  // padding: 95px 26px 110px;
-  // }
+  height: calc(100vh - 95px);
 
-    @include superdesktop {
-      justify-content: center;
-    }
+  @include superdesktop {
+    justify-content: center;
+    height: calc(100vh - 22px);
+  }
 
   &__logo {
     width: 250px;
@@ -122,8 +118,8 @@
         color: $icons;
         font-size: 1.4rem;
 
-          @include superdesktop {
-          font-size: 2.0rem;
+        @include superdesktop {
+          font-size: 2rem;
         }
       }
 
@@ -173,7 +169,6 @@
       font-size: 20px;
       width: 150px;
       height: 46px;
-      
     }
   }
 }
