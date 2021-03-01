@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "./static/css/main.3be1596f.chunk.css",
-    "main.js": "./static/js/main.c97765fb.chunk.js",
-    "main.js.map": "./static/js/main.c97765fb.chunk.js.map",
+    "main.css": "./static/css/main.750b75ed.chunk.css",
+    "main.js": "./static/js/main.64597ab0.chunk.js",
+    "main.js.map": "./static/js/main.64597ab0.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.bc130749.js",
     "runtime-main.js.map": "./static/js/runtime-main.bc130749.js.map",
-    "static/js/2.a57177e3.chunk.js": "./static/js/2.a57177e3.chunk.js",
-    "static/js/2.a57177e3.chunk.js.map": "./static/js/2.a57177e3.chunk.js.map",
+    "static/js/2.3d776d46.chunk.js": "./static/js/2.3d776d46.chunk.js",
+    "static/js/2.3d776d46.chunk.js.map": "./static/js/2.3d776d46.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.3be1596f.chunk.css.map": "./static/css/main.3be1596f.chunk.css.map",
-    "static/js/2.a57177e3.chunk.js.LICENSE.txt": "./static/js/2.a57177e3.chunk.js.LICENSE.txt",
+    "static/css/main.750b75ed.chunk.css.map": "./static/css/main.750b75ed.chunk.css.map",
+    "static/js/2.3d776d46.chunk.js.LICENSE.txt": "./static/js/2.3d776d46.chunk.js.LICENSE.txt",
     "static/media/_card-preview.scss": "./static/media/leaves.c50354b4.jpg",
     "static/media/logo-treehuggers.f90e39cb.png": "./static/media/logo-treehuggers.f90e39cb.png",
     "static/media/monstera.e7ff81a2.png": "./static/media/monstera.e7ff81a2.png"
   },
   "entrypoints": [
     "static/js/runtime-main.bc130749.js",
-    "static/js/2.a57177e3.chunk.js",
-    "static/css/main.3be1596f.chunk.css",
-    "static/js/main.c97765fb.chunk.js"
+    "static/js/2.3d776d46.chunk.js",
+    "static/css/main.750b75ed.chunk.css",
+    "static/js/main.64597ab0.chunk.js"
   ]
 }
