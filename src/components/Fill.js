@@ -1,7 +1,7 @@
-import React from 'react';
-import '../stylesheets/layout/_fill.scss';
-import InputForm from './InputForm';
-import InputImage from './InputImage';
+import React from "react";
+import "../stylesheets/layout/_fill.scss";
+import InputForm from "./InputForm";
+import InputImage from "./InputImage";
 
 class Fill extends React.Component {
   constructor(props) {
@@ -17,6 +17,7 @@ class Fill extends React.Component {
           generalValue="name"
           type="text"
           placeholder="Ej: Tree Huggers"
+          value={this.props.value.name}
           handleChange={this.props.handleChange}
         />
         <InputForm
@@ -24,6 +25,7 @@ class Fill extends React.Component {
           generalValue="job"
           type="text"
           placeholder="Ej: Front-end developers"
+          value={this.props.value.job}
           handleChange={this.props.handleChange}
         />
         <InputImage
@@ -37,6 +39,7 @@ class Fill extends React.Component {
           generalValue="email"
           type="email"
           placeholder="Ej: treehuggers@gmail.com"
+          value={this.props.value.email}
           handleChange={this.props.handleChange}
         />
         <InputForm
@@ -45,6 +48,7 @@ class Fill extends React.Component {
           type="tel"
           placeholder="Ej: 123456789"
           pattern="[0-9]{9}"
+          value={this.props.value.phone}
           handleChange={this.props.handleChange}
         />
         <InputForm
@@ -52,6 +56,7 @@ class Fill extends React.Component {
           generalValue="linkedin"
           type="text"
           placeholder="Ej: linkedin.com/in/treehuggers"
+          value={this.props.value.linkedin}
           handleChange={this.props.handleChange}
         />
         <InputForm
@@ -59,6 +64,7 @@ class Fill extends React.Component {
           generalValue="github"
           type="text"
           placeholder="Ej: @treeHuggers"
+          value={this.props.value.github}
           handleChange={this.props.handleChange}
         />
       </div>
