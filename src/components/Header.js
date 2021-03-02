@@ -12,7 +12,7 @@ class Header extends React.Component {
     return (
       <header className="header">
         <div className="header__container">
-          <a href="./index.html" title="home">
+          <a href="" title="home">
             <img
               className="header__container--logo"
               src={logo}
