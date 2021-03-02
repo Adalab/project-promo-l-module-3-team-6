@@ -3,25 +3,25 @@
   background: url(../../images/leaves.jpg) no-repeat center;
   background-size: cover;
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border: 1px #d8d8d8;
-  height: calc(100vh - 95px);
+  height: calc(100vh - 112px);
+  padding: 95px 35px 30px;
 
-  @include superdesktop {
-    justify-content: center;
-    height: calc(100vh - 22px);
+  @include tablet {
+    height: calc(100vh - 62px);
+    padding-bottom: 59px;
   }
 
   &__logo {
     width: 250px;
     height: 63px;
+    object-fit: contain;
 
     @include tablet {
       width: 419px;
       height: 105px;
-      margin-top: 350px;
     }
 
     @include superdesktop {
@@ -153,7 +153,6 @@
     width: 129px;
     height: 42px;
     margin: 38.6px 0 40px;
-    // display: flex;
     padding: 10px 20px;
     border-radius: 21px;
     &:hover {

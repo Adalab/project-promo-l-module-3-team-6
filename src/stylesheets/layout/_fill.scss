@@ -7,12 +7,9 @@
   text-transform: uppercase;
   color: $smaller-text;
   @include tablet {
-    // width: 233px;
     padding: 27px 30px 0 40px;
   }
-  @include desktop {
-    // width: 40vw;
-  }
+
 
   &__header {
     padding-bottom: 10px;
@@ -42,7 +39,6 @@
     flex-direction: column;
     border-bottom: $border-lines solid 1px;
     color: $main-text;
-    // padding-top: 15px;
 
     &--notice {
       padding-bottom: 20px;

@@ -37,7 +37,7 @@ class Navigation extends React.Component {
             numberPalette={this.props.numberPalette}
             jsClass="phone"
             icon="fas fa-mobile-alt"
-            href={this.props.phone}
+            href={"tel:" + this.props.phone}
           />
           <IconNavigation
             numberPalette={this.props.numberPalette}
