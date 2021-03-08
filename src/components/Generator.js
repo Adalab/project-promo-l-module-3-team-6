@@ -6,6 +6,7 @@ import Header from "./Header";
 import Desing from "./Desing";
 import Card from "./Card";
 import Footer from "./Footer";
+import ls from "../services/localStorage";
 
 class Generator extends React.Component {
   constructor(props) {
@@ -29,6 +30,17 @@ class Generator extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.updateAvatar = this.updateAvatar.bind(this);
+  }
+
+  componentDidMount() {
+    const localStorageData = ls.get("data");
+    if (localStorageData) {
+      this.setState(localStorageData);
+    }
+  }
+
+  componentDidUpdate() {
+    ls.set("data", this.state);
   }
 
   updateAvatar(avatar) {
@@ -70,6 +82,7 @@ class Generator extends React.Component {
       email: "",
       linkedin: "",
       github: "",
+      avatar: "",
     });
   }
 
