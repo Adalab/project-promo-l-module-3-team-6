@@ -7,6 +7,7 @@ import Desing from "./Desing";
 import Card from "./Card";
 import Footer from "./Footer";
 import ls from "../services/localStorage";
+import fetchAPI from "../services/postDataToApi";
 
 class Generator extends React.Component {
   constructor(props) {
@@ -25,11 +26,15 @@ class Generator extends React.Component {
       linkedin: "",
       github: "",
       avatar: "",
+      result: "",
+      linkShare: "",
+      urlTwitter: "",
     };
     this.changeCollapsable = this.changeCollapsable.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.updateAvatar = this.updateAvatar.bind(this);
+    this.handleShare = this.handleShare.bind(this);
   }
 
   componentDidMount() {
@@ -83,6 +88,33 @@ class Generator extends React.Component {
       linkedin: "",
       github: "",
       avatar: "",
+    });
+  }
+
+  handleShare() {
+    const data = {
+      photo: this.state.avatar,
+      palette: this.state.numberPaletteActivated,
+      name: this.state.name,
+      job: this.state.job,
+      email: this.state.email,
+      phone: this.state.phone,
+      linkedin: this.state.linkedin,
+      github: this.state.github,
+    };
+    fetchAPI(data).then((data) => {
+      if (data.success === true) {
+        this.setState({ result: "La tarjeta ha sido creada." });
+        this.setState({ linkShare: data.cardURL });
+        this.setState({ urlTwitter: data.cardURL });
+      } else {
+        this.setState({
+          result:
+            "Ups! No se ha podido crear tu tarjeta. Rellena todos tus datos.",
+        });
+        this.setState({ linkShare: "" });
+        this.setState({ urlTwitter: "" });
+      }
     });
   }
 
@@ -155,7 +187,7 @@ class Generator extends React.Component {
                   icon="fas fa-share-alt"
                   openClassName={this.state.collapsable.share}
                 >
-                  <Share />
+                  <Share handleShare={this.handleShare} />
                 </Collapsable>
               </fieldset>
             </form>
