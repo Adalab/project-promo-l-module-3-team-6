@@ -12,6 +12,7 @@ class Card extends React.Component {
             name={this.props.name}
             job={this.props.job}
             numberPalette={this.props.numberPaletteActivated}
+            avatar={this.props.avatar}
           />
           <Navigation
             numberPalette={this.props.numberPaletteActivated}

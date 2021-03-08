@@ -23,10 +23,16 @@ class Generator extends React.Component {
       email: "",
       linkedin: "",
       github: "",
+      avatar: "",
     };
     this.changeCollapsable = this.changeCollapsable.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.updateAvatar = this.updateAvatar.bind(this);
+  }
+
+  updateAvatar(avatar) {
+    this.setState({ avatar: avatar });
   }
 
   changeCollapsable(nameCollapsable, prevOpen) {
@@ -81,6 +87,7 @@ class Generator extends React.Component {
             linkedin={this.state.linkedin}
             github={this.state.github}
             handleReset={this.handleReset}
+            avatar={this.state.avatar}
           />
           <section className="app__custom">
             <form method="post" className="app__form js-submit">
@@ -121,6 +128,8 @@ class Generator extends React.Component {
                     labellinkedin="Linkedin"
                     labelgit="Github"
                     handleChange={this.handleChange}
+                    avatar={this.state.avatar}
+                    updateAvatar={this.updateAvatar}
                   />
                 </Collapsable>
               </fieldset>

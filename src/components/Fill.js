@@ -33,6 +33,8 @@ class Fill extends React.Component {
           label={this.props.labelImage}
           generalValue="image"
           type="file"
+          avatar={this.props.avatar}
+          updateAvatar={this.props.updateAvatar}
         />
         <InputForm
           label={this.props.labelemail}
