@@ -1,14 +1,15 @@
-function fetchAPI(dataFromComponent) {
-  const url = "https://awesome-profile-cards.herokuapp.com/card";
+const postDataToApi = (dataFromComponent) => {
+  const urlServer = 'https://awesome-profile-cards.herokuapp.com/card';
   // eslint-disable-next-line no-undef
-  const message = dataFromComponent;
-  fetch(url, {
-    method: "POST",
-    body: JSON.stringify(message),
+  /*  const message = dataFromComponent; */
+
+  return fetch(urlServer, {
+    method: 'POST',
+    body: JSON.stringify(dataFromComponent),
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   }).then((response) => response.json());
-}
+};
 
-export default fetchAPI;
+export default postDataToApi;

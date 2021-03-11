@@ -1,13 +1,13 @@
-import React from "react";
-import Fill from "./Fill";
-import Share from "./Share";
-import Collapsable from "./Collapsable";
-import Header from "./Header";
-import Desing from "./Desing";
-import Card from "./Card";
-import Footer from "./Footer";
-import ls from "../services/localStorage";
-import fetchAPI from "../services/postDataToApi";
+import React from 'react';
+import Fill from './Fill';
+import Share from './Share';
+import Collapsable from './Collapsable';
+import Header from './Header';
+import Desing from './Desing';
+import Card from './Card';
+import Footer from './Footer';
+import ls from '../services/localStorage';
+import postDataToApi from '../services/postDataToApi';
 
 class Generator extends React.Component {
   constructor(props) {
@@ -18,17 +18,17 @@ class Generator extends React.Component {
         fill: false,
         share: false,
       },
-      numberPaletteActivated: "1",
-      name: "",
-      job: "",
-      phone: "",
-      email: "",
-      linkedin: "",
-      github: "",
-      avatar: "",
-      result: "",
-      linkShare: "",
-      urlTwitter: "",
+      numberPaletteActivated: '1',
+      name: '',
+      job: '',
+      phone: '',
+      email: '',
+      linkedin: '',
+      github: '',
+      avatar: '',
+      result: '',
+      linkShare: '',
+      urlTwitter: '',
     };
     this.changeCollapsable = this.changeCollapsable.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -38,14 +38,15 @@ class Generator extends React.Component {
   }
 
   componentDidMount() {
-    const localStorageData = ls.get("data");
+    const localStorageData = ls.get('data');
     if (localStorageData) {
       this.setState(localStorageData);
     }
   }
 
   componentDidUpdate() {
-    ls.set("data", this.state);
+    const { result, linkShare, urlTwitter, ...dataToSave } = this.state;
+    ls.set('data', dataToSave);
   }
 
   updateAvatar(avatar) {
@@ -53,7 +54,7 @@ class Generator extends React.Component {
   }
 
   changeCollapsable(nameCollapsable, prevOpen) {
-    const collapsables = ["design", "fill", "share"];
+    const collapsables = ['design', 'fill', 'share'];
     const myCollapsableChanged = collapsables.filter(
       (item) => item !== nameCollapsable
     );
@@ -80,19 +81,22 @@ class Generator extends React.Component {
 
   handleReset() {
     this.setState({
-      numberPaletteActivated: "1",
-      name: "",
-      job: "",
-      phone: "",
-      email: "",
-      linkedin: "",
-      github: "",
-      avatar: "",
+      numberPaletteActivated: '1',
+      name: '',
+      job: '',
+      phone: '',
+      email: '',
+      linkedin: '',
+      github: '',
+      avatar: '',
+      result: '',
+      linkShare: '',
+      urlTwitter: '',
     });
   }
 
   handleShare() {
-    const data = {
+    const dataToSend = {
       photo: this.state.avatar,
       palette: this.state.numberPaletteActivated,
       name: this.state.name,
@@ -102,18 +106,19 @@ class Generator extends React.Component {
       linkedin: this.state.linkedin,
       github: this.state.github,
     };
-    fetchAPI(data).then((data) => {
+
+    postDataToApi(dataToSend).then((data) => {
       if (data.success === true) {
-        this.setState({ result: "La tarjeta ha sido creada." });
+        this.setState({ result: 'La tarjeta ha sido creada.' });
         this.setState({ linkShare: data.cardURL });
         this.setState({ urlTwitter: data.cardURL });
       } else {
         this.setState({
           result:
-            "Ups! No se ha podido crear tu tarjeta. Rellena todos tus datos.",
+            'Ups! No se ha podido crear tu tarjeta. Rellena todos tus datos.',
         });
-        this.setState({ linkShare: "" });
-        this.setState({ urlTwitter: "" });
+        this.setState({ linkShare: '' });
+        this.setState({ urlTwitter: '' });
       }
     });
   }
@@ -150,7 +155,7 @@ class Generator extends React.Component {
                     numberPaletteActivated={this.state.numberPaletteActivated}
                     handleChange={this.handleChange}
                   />
-                </Collapsable>{" "}
+                </Collapsable>{' '}
               </fieldset>
               <fieldset className={`fill js-collapsable-container`}>
                 <Collapsable
@@ -187,7 +192,12 @@ class Generator extends React.Component {
                   icon="fas fa-share-alt"
                   openClassName={this.state.collapsable.share}
                 >
-                  <Share handleShare={this.handleShare} />
+                  <Share
+                    handleShare={this.handleShare}
+                    linkShare={this.state.linkShare}
+                    result={this.state.result}
+                    urlTwitter={this.state.urlTwitter}
+                  />
                 </Collapsable>
               </fieldset>
             </form>

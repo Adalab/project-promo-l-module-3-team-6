@@ -1,16 +1,25 @@
-import React from "react";
-import "../stylesheets/layout/_share.scss";
+import React from 'react';
+import '../stylesheets/layout/_share.scss';
 
 class Share extends React.Component {
   constructor(props) {
     super(props);
+    this.handleShareButton = this.handleShareButton.bind(this);
+  }
+
+  handleShareButton() {
+    this.props.handleShare();
   }
 
   render() {
     return (
       <>
         <div className="share__create">
-          <button className="share__create--button js-create-btn">
+          <button
+            className="share__create--button js-create-btn"
+            onClick={this.handleShareButton}
+            type="button"
+          >
             <i className="far fa-address-card share__button--icon"></i>
             Crear tarjeta
           </button>
@@ -23,7 +32,9 @@ class Share extends React.Component {
               href={this.props.linkShare}
               className="jsUrl urlcard"
               target="_blank"
-            ></a>
+            >
+              {this.props.linkShare}
+            </a>
           </p>
 
           <button
@@ -33,7 +44,7 @@ class Share extends React.Component {
             <i className="fab fa-twitter share__result--twitter_icon"></i>
             <a
               href={
-                "https://twitter.com/intent/tweet?url=Échale%20un%20vistazo%20a%20mi%20tarjeta%20virtual%20" +
+                'https://twitter.com/intent/tweet?url=Échale%20un%20vistazo%20a%20mi%20tarjeta%20virtual%20' +
                 this.props.urlTwitter
               }
               className="share__result--twitterlink js-twitter-link"
