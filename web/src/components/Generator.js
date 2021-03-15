@@ -109,13 +109,12 @@ class Generator extends React.Component {
 
     postDataToApi(dataToSend).then((data) => {
       if (data.success === true) {
-        this.setState({ result: 'La tarjeta ha sido creada.' });
+        this.setState({ result: data.message });
         this.setState({ linkShare: data.cardURL });
         this.setState({ urlTwitter: data.cardURL });
       } else {
         this.setState({
-          result:
-            'Ups! No se ha podido crear tu tarjeta. Rellena todos tus datos.',
+          result: data.message,
         });
         this.setState({ linkShare: '' });
         this.setState({ urlTwitter: '' });

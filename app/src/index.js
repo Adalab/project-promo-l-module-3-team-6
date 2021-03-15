@@ -1,5 +1,5 @@
-const express = require("express");
-const cors = require("cors");
+const express = require('express');
+const cors = require('cors');
 
 const app = express();
 
@@ -11,17 +11,26 @@ app.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-app.post("/card", (req, res) => {
-  const response = {
-    palette: req.body.palette, //ojo que viene como string
-    name: req.body.name,
-    job: req.body.job,
-    phone: req.body.phone,
-    email: req.body.email,
-    linkedin: req.body.linkedin,
-    github: req.body.github,
-    photo: req.body.photo,
-  };
-  console.log(response);
-  res.json(response);
+app.post('/card', (req, res) => {
+  const bodyParams = req.body;
+
+  const missed = [];
+
+  for (const param in bodyParams) {
+    if (!bodyParams[param]) {
+      missed.push(param);
+    }
+  }
+
+  if (missed.length === 0) {
+    res.status(200).json({
+      success: true,
+      message: 'La tarjeta ha sido creada.',
+    });
+  } else {
+    res.status(400).json({
+      success: false,
+      message: 'Faltan los siguientes datos: ' + missed.join(', '),
+    });
+  }
 });

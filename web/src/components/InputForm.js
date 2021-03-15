@@ -1,5 +1,5 @@
-import React from "react";
-import "../stylesheets/layout/_fill.scss";
+import React from 'react';
+import '../stylesheets/layout/_fill.scss';
 
 class InputForm extends React.Component {
   constructor(props) {
@@ -11,7 +11,6 @@ class InputForm extends React.Component {
     this.props.handleChange(ev.target.name, ev.target.value);
   }
   render() {
-    console.log(this.props.value);
     return (
       <>
         <label className="fill__form--label" htmlFor={this.props.generalValue}>
