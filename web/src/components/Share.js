@@ -11,6 +11,29 @@ class Share extends React.Component {
     this.props.handleShare();
   }
 
+  renderTwitterButtonCondition = () => {
+    if (this.props.urlTwitter.length !== 0) {
+      return (
+        <button className="share__result--twitter js-twitter-btn" type="button">
+          <i className="fab fa-twitter share__result--twitter_icon"></i>
+          <a
+            href={
+              'https://twitter.com/intent/tweet?url=Échale%20un%20vistazo%20a%20mi%20tarjeta%20virtual%20' +
+              this.props.urlTwitter
+            }
+            className="share__result--twitterlink js-twitter-link"
+            data-show-count="false"
+            target="_blank"
+          >
+            Compartir en twitter
+          </a>
+        </button>
+      );
+    } else {
+      return <h3> Estas dentro del renderTwitter y no hay URL aún</h3>;
+    }
+  };
+
   render() {
     return (
       <>
@@ -36,8 +59,8 @@ class Share extends React.Component {
               {this.props.linkShare}
             </a>
           </p>
-
-          <button
+          {this.renderTwitterButtonCondition()}
+          {/*           <button
             className="share__result--twitter js-twitter-btn"
             type="button"
           >
@@ -53,7 +76,7 @@ class Share extends React.Component {
             >
               Compartir en twitter
             </a>
-          </button>
+          </button> */}
         </div>
       </>
     );

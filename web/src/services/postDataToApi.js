@@ -1,13 +1,14 @@
 const postDataToApi = (dataFromComponent) => {
-  const urlServer = "http://localhost:3000/card";
+  const urlServer = '/card';
+  /* const urlServer = 'http://localhost:3000/card'; */
   // eslint-disable-next-line no-undef
   /*  const message = dataFromComponent; */
 
   return fetch(urlServer, {
-    method: "POST",
+    method: 'POST',
     body: JSON.stringify(dataFromComponent),
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   }).then((response) => response.json());
 };

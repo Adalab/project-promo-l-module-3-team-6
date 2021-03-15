@@ -11,6 +11,10 @@ app.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
+// static server
+const staticServerPath = './public';
+app.use(express.static(staticServerPath));
+
 app.post('/card', (req, res) => {
   const bodyParams = req.body;
 
@@ -26,6 +30,7 @@ app.post('/card', (req, res) => {
     res.status(200).json({
       success: true,
       message: 'La tarjeta ha sido creada.',
+      cardURL: 'provisional',
     });
   } else {
     res.status(400).json({
@@ -34,3 +39,5 @@ app.post('/card', (req, res) => {
     });
   }
 });
+
+app.get('/card/:id', (req, res) => {});

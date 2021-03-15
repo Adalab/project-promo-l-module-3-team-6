@@ -1,7 +1,7 @@
-import React from "react";
-import "../stylesheets/layout/_card-preview.scss";
-import defaultAvatar from "../images/animals.gif";
-import PropTypes from "prop-types";
+import React from 'react';
+import '../stylesheets/layout/_card-preview.scss';
+import defaultAvatar from '../images/animals.gif';
+import PropTypes from 'prop-types';
 
 class CardPreview extends React.Component {
   constructor(props) {
@@ -9,17 +9,17 @@ class CardPreview extends React.Component {
   }
 
   render() {
-    const avatar = this.props.avatar === "" ? defaultAvatar : this.props.avatar;
+    const avatar = this.props.avatar === '' ? defaultAvatar : this.props.avatar;
     return (
       <>
         <div
           className={`card__preview--text js-palette${this.props.numberPalette} js-palette resetColorPalette`}
         >
           <h3 className="card__preview--text-name js-preview-name previewCardName">
-            {this.props.name || "Nombre Completo"}
+            {this.props.name || 'Nombre Completo'}
           </h3>
           <h4 className="card__preview--text-job js-preview-job">
-            {this.props.job || "Puesto"}
+            {this.props.job || 'Puesto'}
           </h4>
         </div>
         <div
