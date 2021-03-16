@@ -6,7 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 
-const serverPort = 3000;
+// set template engine middlewares
+app.set('view engine', 'ejs');
+
+const serverPort = process.env.PORT || 3000;
 app.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -39,5 +42,12 @@ app.post('/card', (req, res) => {
     });
   }
 });
+/* 
+app.get('/es/film:filmId.html', (req, res) => {
+  // get film data
+  const filmData = films.find((film) => film.id === req.params.filmId);
+  console.log('film data', filmData);
 
-app.get('/card/:id', (req, res) => {});
+    res.render('pages/film-not-found');
+  }
+}); */
