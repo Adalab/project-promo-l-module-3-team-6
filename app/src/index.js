@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const Database = require('better-sqlite3');
 
 const app = express();
 
@@ -12,6 +13,12 @@ app.set('view engine', 'ejs');
 const serverPort = process.env.PORT || 3000;
 app.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
+});
+
+// init and config data base
+const db = new Database('./src/database.db', {
+  // this line log in console all data base queries
+  verbose: console.log,
 });
 
 // static server
@@ -42,6 +49,30 @@ app.post('/card', (req, res) => {
     });
   }
 });
+
+/* app.get('/all-books', (req, res) => {
+  const query = db.prepare(`SELECT name FROM books ORDER BY price DESC`);
+  const books = query.all();
+  res.json(books);
+}); */
+
+/* 
+app.post('/new-book/', (req, res) => {
+  const query = db.prepare(
+    `INSERT INTO books(name, author, price, stock, printable) VALUES (?, ?, ?, ?, ?)`
+  );
+  const book = query.run(
+    req.body.name,
+    req.body.author,
+    req.body.price,
+    req.body.stock,
+    req.body.printable
+  );
+  res.json({
+    result: 'Book created',
+    bookID: book.lastInsertRowid,
+  });
+}); */
 /* 
 app.get('/es/film:filmId.html', (req, res) => {
   // get film data
