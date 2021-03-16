@@ -2,69 +2,105 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f2e0e49a34.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="icon" href="/favicon.png" />
+    <link
+      href="/static/css/main.6398cfa7.chunk.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <title>Your Tree Huggers Card</title>
   </head>
   <body>
-    <div class="card__preview js-card">
-      <div class="card__preview--text js-palette1 js-palette resetColorPalette">
-        <h3 class="card__preview--text-name js-preview-name previewCardName">
-          Nombre Completo
-        </h3>
-        <h4 class="card__preview--text-job js-preview-job">Puesto</h4>
+    <section class="app__card">
+      <div class="card__preview js-card">
+        <div
+          class="card__preview--text js-palette1 js-palette resetColorPalette"
+        >
+          <h3 class="card__preview--text-name js-preview-name previewCardName">
+            <%=name%>
+          </h3>
+          <h4 class="card__preview--text-job js-preview-job"><%=job%></h4>
+        </div>
+        <div
+          class="card__preview--photo js__profile-image"
+          style="background-image: url('<%=photo%>')"
+        ></div>
+        <nav class="card__preview--nav">
+          <ul class="card__socialmedia">
+            <li
+              class="card__socialmedia--item js-border-palette1-color3 js-phone pale__icon"
+            >
+              <a
+                target="_blank"
+                href="tel:<%=phone%>"
+                alt="phone"
+                class="js-preview-phone"
+                rel="noreferrer"
+                ><i
+                  class="card__socialmedia--link fas fa-mobile-alt js-icon-palette1-color2"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </li>
+            <li
+              class="card__socialmedia--item js-border-palette1-color3 js-email pale__icon"
+            >
+              <a
+                target="_blank"
+                href="mailto:<%=email%>"
+                alt="email"
+                class="js-preview-email"
+                rel="noreferrer"
+                ><i
+                  class="card__socialmedia--link far fa-envelope js-icon-palette1-color2"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </li>
+            <li
+              class="card__socialmedia--item js-border-palette1-color3 js-linkedin pale__icon"
+            >
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/<%=linkedin%>"
+                alt="linkedin"
+                class="js-preview-linkedin"
+                rel="noreferrer"
+                ><i
+                  class="card__socialmedia--link fab fa-linkedin-in js-icon-palette1-color2"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </li>
+            <li
+              class="card__socialmedia--item js-border-palette1-color3 js-github pale__icon"
+            >
+              <a
+                target="_blank"
+                href="https://github.com/<%=github%>"
+                alt="github"
+                class="js-preview-github"
+                rel="noreferrer"
+                ><i
+                  class="card__socialmedia--link fab fa-github-alt js-icon-palette1-color2"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="card__preview--photo js__profile-image"></div>
-      <nav class="card__preview--nav">
-        <ul class="card__socialmedia">
-          <li
-            class="card__socialmedia--item js-border-palette1-color3 js-phone pale__icon"
-          >
-            <a target="_blank" href="" alt="mobile" class="js-preview-phone">
-              <i
-                class="card__socialmedia--link fas fa-mobile-alt js-icon-palette1-color2"
-              ></i>
-            </a>
-          </li>
-          <li
-            class="card__socialmedia--item js-border-palette1-color3 opacity js-email"
-          >
-            <a
-              target="_blank"
-              href="mailto:"
-              alt="email"
-              class="js-preview-email"
-            >
-              <i
-                class="card__socialmedia--link far fa-envelope js-icon-palette1-color2"
-              ></i>
-            </a>
-          </li>
-          <li
-            class="card__socialmedia--item js-border-palette1-color3 opacity js-linkedin pale__icon"
-          >
-            <a
-              target="_blank"
-              href=""
-              alt="linkedin"
-              class="js-preview-linkedin"
-            >
-              <i
-                class="card__socialmedia--link fab fa-linkedin-in js-icon-palette1-color2"
-              ></i>
-            </a>
-          </li>
-          <li
-            class="card__socialmedia--item js-border-palette1-color3 opacity js-github pale__icon"
-          >
-            <a target="_blank" href="" alt="github" class="js-preview-github">
-              <i
-                class="card__socialmedia--link fab fa-github-alt js-icon-palette1-color2"
-              ></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    </section>
   </body>
 </html>

@@ -16,7 +16,7 @@ app.listen(serverPort, () => {
 });
 
 // init and config data base
-const db = new Database('./src/database.db', {
+const db = new Database('./src/data/cards.db', {
   // this line log in console all data base queries
   verbose: console.log,
 });
@@ -24,6 +24,13 @@ const db = new Database('./src/database.db', {
 // static server
 const staticServerPath = './public';
 app.use(express.static(staticServerPath));
+
+app.get('/card/:id', (req, res) => {
+  const cardId = req.params.id;
+  const query = db.prepare(`SELECT * FROM cards WHERE id=?`);
+  const cardData = query.get(cardId);
+  res.render('./pages/card', cardData);
+});
 
 app.post('/card', (req, res) => {
   const bodyParams = req.body;
@@ -37,10 +44,26 @@ app.post('/card', (req, res) => {
   }
 
   if (missed.length === 0) {
+    const query = db.prepare(
+      `INSERT INTO cards(palette, name, job, phone, email, linkedin, github, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+    );
+    const cardData = query.run(
+      req.body.palette,
+      req.body.name,
+      req.body.job,
+      req.body.phone,
+      req.body.email,
+      req.body.linkedin,
+      req.body.github,
+      req.body.photo
+    );
+
+    const cardURLString = `http://localhost:3000/card/${cardData.lastInsertRowid}`;
+
     res.status(200).json({
       success: true,
       message: 'La tarjeta ha sido creada.',
-      cardURL: 'provisional',
+      cardURL: cardURLString,
     });
   } else {
     res.status(400).json({
@@ -49,36 +72,3 @@ app.post('/card', (req, res) => {
     });
   }
 });
-
-/* app.get('/all-books', (req, res) => {
-  const query = db.prepare(`SELECT name FROM books ORDER BY price DESC`);
-  const books = query.all();
-  res.json(books);
-}); */
-
-/* 
-app.post('/new-book/', (req, res) => {
-  const query = db.prepare(
-    `INSERT INTO books(name, author, price, stock, printable) VALUES (?, ?, ?, ?, ?)`
-  );
-  const book = query.run(
-    req.body.name,
-    req.body.author,
-    req.body.price,
-    req.body.stock,
-    req.body.printable
-  );
-  res.json({
-    result: 'Book created',
-    bookID: book.lastInsertRowid,
-  });
-}); */
-/* 
-app.get('/es/film:filmId.html', (req, res) => {
-  // get film data
-  const filmData = films.find((film) => film.id === req.params.filmId);
-  console.log('film data', filmData);
-
-    res.render('pages/film-not-found');
-  }
-}); */
