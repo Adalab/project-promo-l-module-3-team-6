@@ -37,7 +37,7 @@ Al final de cada sprint hicimos una demo para presentar los resultados conseguid
 ## Estructura
 La estructura de carpetas es la siguiente:
 
-´´´
+```
 
  |_ app
   |_ public
@@ -81,4 +81,5 @@ La estructura de carpetas es la siguiente:
 |_ package.json
 |_ README.md
 
-´´´
+
+```
