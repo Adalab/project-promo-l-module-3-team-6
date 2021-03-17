@@ -58,10 +58,10 @@ app.post('/card', (req, res) => {
       req.body.photo
     );
 
-    /* let apiUrl = 'https://react-huggers-cards.herokuapp.com'; */
+    let apiUrl = 'https://react-huggers-cards.herokuapp.com';
 
     /*     if (req.host === 'localhost') { */
-    const apiUrl = 'http://localhost:3000';
+    /* const apiUrl = 'http://localhost:3000'; */
     /*   } */
     const cardURLString = `${apiUrl}/card/${cardData.lastInsertRowid}`;
 

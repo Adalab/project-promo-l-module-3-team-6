@@ -4,7 +4,7 @@ console.log(process.env.NODE_ENV);
   ? 'http://localhost:3000'
   : 'https://react-huggers-cards.herokuapp.com'; */
 
-const apiUrl = 'http://localhost:3000';
+const apiUrl = 'https://react-huggers-cards.herokuapp.com';
 
 const postDataToApi = (dataFromComponent) => {
   const urlServer = `${apiUrl}/card`;
