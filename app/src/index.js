@@ -4,6 +4,12 @@ const Database = require('better-sqlite3');
 
 const app = express();
 
+const isDevEnviroment = true;
+
+const apiUrl = isDevEnviroment
+  ? 'http://localhost:3000'
+  : 'https://react-huggers-cards.herokuapp.com';
+
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 
@@ -58,7 +64,8 @@ app.post('/card', (req, res) => {
       req.body.photo
     );
 
-    const cardURLString = `http://localhost:3000/card/${cardData.lastInsertRowid}`;
+    const cardURLString = `${apiUrl}/card/${cardData.lastInsertRowid}`;
+    /*     const cardURLString = `http://localhost:3000/card/${cardData.lastInsertRowid}`; */
 
     res.status(200).json({
       success: true,
