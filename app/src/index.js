@@ -63,7 +63,7 @@ app.post('/card', (req, res) => {
       req.body.github,
       req.body.photo
     );
-
+    console.log(req.host);
     const cardURLString = `${apiUrl}/card/${cardData.lastInsertRowid}`;
     /*     const cardURLString = `http://localhost:3000/card/${cardData.lastInsertRowid}`; */
 
