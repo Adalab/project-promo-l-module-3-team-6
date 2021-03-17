@@ -2,9 +2,13 @@
 
 ## Somos REACT HUGGERS:
 :octocat: Amanda Garcia 
+
 :octocat: Cristina Gonzalez
+
 :octocat: Esther López 
+
 :octocat: Liliana Mendoza 
+
 
 ## Objetivos 🎯
 
@@ -19,20 +23,32 @@ Aprender a buscar información en la documentación de librerías externas. 🕵
 
 ## Especificaciones 📜
 Uso avanzado de HTML5 ✔️
+
 Maquetación usando SASS, incluyendo flex ✔️
+
 Uso de mediaqueries para que el diseño sea adaptable al dispositivo usando la estrategia mobile first ✔️
+
 Acceso y envío de datos a un servidor ✔️
+
 Almacenamiento en local usando LocalStorage ✔️
+
 Uso de git para el control de versiones del proyecto ✔️
+
 Publicación del resultado en Internet usando GitHub Pages ✔️
+
 
 ## Metodología de trabajo 🛠️
 ### Scrum
 Para la realización de este proyecto trabajamos en  sprints. ✌️
+
 Dedicamos el primer día a la planificación del sprint y el resto a trabajar en el desarrollo del proyecto. ♟️
+
 En el primer sprint hemos contado con Esther como Scrum Master y con Amanda en el segundo sprint. Ambas se han ocupado de organizar las dailys, convocar reuniones extraordinarias y se han preocupado de que todo fuese bien. 🧘🏻‍♀️
+
 Hemos realizado dailys para estar todo el equipo actualizado y para determinar el siguiente paso a seguir. Hemos mantenido una comunicación constante a través de diferentes herramientas. 🌇
+
 Al final de cada sprint hicimos una demo para presentar los resultados conseguidos, y una retrospectiva (retro) para evaluar nuestro trabajo en equipo y mejorar en el siguiente sprint. 👩‍🏫
+
 
 ## Estructura
 La estructura de carpetas es la siguiente:
