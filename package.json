@@ -2,7 +2,7 @@
     "name": "react-huggers-cards",
     "version": "0.1.0",
     "scripts": {
-        "start": "cd web && npm install && npm run build && cd .. && cd server && npm install && npm start",
+        "start": "cd web && npm install && npm run build && cd .. && cd app && npm install && npm start",
         "dev": "cd app && npm run dev & cd web && npm start "
     }
 }
