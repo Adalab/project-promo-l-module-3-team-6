@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.6398cfa7.chunk.css",
-    "main.js": "./static/js/main.dbf3e760.chunk.js",
-    "main.js.map": "./static/js/main.dbf3e760.chunk.js.map",
+    "main.css": "./static/css/main.4da47224.chunk.css",
+    "main.js": "./static/js/main.1bfe63e3.chunk.js",
+    "main.js.map": "./static/js/main.1bfe63e3.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.bc130749.js",
     "runtime-main.js.map": "./static/js/runtime-main.bc130749.js.map",
     "static/js/2.ab3bc399.chunk.js": "./static/js/2.ab3bc399.chunk.js",
     "static/js/2.ab3bc399.chunk.js.map": "./static/js/2.ab3bc399.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.6398cfa7.chunk.css.map": "./static/css/main.6398cfa7.chunk.css.map",
+    "static/css/main.4da47224.chunk.css.map": "./static/css/main.4da47224.chunk.css.map",
     "static/js/2.ab3bc399.chunk.js.LICENSE.txt": "./static/js/2.ab3bc399.chunk.js.LICENSE.txt",
     "static/media/animals.2e90e65e.gif": "./static/media/animals.2e90e65e.gif",
     "static/media/_landing.scss": "./static/media/leaves.c50354b4.jpg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.bc130749.js",
     "static/js/2.ab3bc399.chunk.js",
-    "static/css/main.6398cfa7.chunk.css",
-    "static/js/main.dbf3e760.chunk.js"
+    "static/css/main.4da47224.chunk.css",
+    "static/js/main.1bfe63e3.chunk.js"
   ]
 }

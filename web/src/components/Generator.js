@@ -126,7 +126,7 @@ class Generator extends React.Component {
     return (
       <>
         <Header />
-        <main className="app">
+        <main className="app centralColumn">
           <Card
             numberPaletteActivated={this.state.numberPaletteActivated}
             name={this.state.name}

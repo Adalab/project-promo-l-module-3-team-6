@@ -1,8 +1,10 @@
+const isDevEnviroment = process.env.NODE_ENV === 'development';
+const apiUrl = isDevEnviroment
+  ? 'http://localhost:3000'
+  : 'https://react-huggers-cards.herokuapp.com/';
+
 const postDataToApi = (dataFromComponent) => {
-  const urlServer = '/card';
-  /* const urlServer = 'http://localhost:3000/card'; */
-  // eslint-disable-next-line no-undef
-  /*  const message = dataFromComponent; */
+  const urlServer = `${apiUrl}/card`;
 
   return fetch(urlServer, {
     method: 'POST',
